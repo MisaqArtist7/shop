@@ -1,14 +1,21 @@
 import { Metadata } from "next"
+import Header from "@/_components/shared/Header/Header"
+import Footer from "@/_components/shared/Footer/Footer"
 
-export const metadata:Metadata = {
-    title : 'صفحه اصلی',
-    description : 'فروشگاه تچهیزات امنیتی و شبکه'
+export const metadata: Metadata = {
+    title: {
+        default: "فروشگاه تجهیزات امنیتی",
+        template: "%s | فروشگاه"
+    },
+    description: "فروشگاه تجهیزات امنیتی و شبکه",
 }
 
 export default function HomeLayout({children, }: Readonly<{ children : React.ReactNode }>) {
     return (
-        <main>
-            {children}
-        </main>
+        <>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+        </>
     )
 }
