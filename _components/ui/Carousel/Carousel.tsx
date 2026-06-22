@@ -5,6 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination } from 'swiper/modules'
 import Image from 'next/image'
 import 'swiper/css/bundle'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 export default function CarouselComponent() {
     return (
