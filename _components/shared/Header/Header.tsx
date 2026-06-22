@@ -44,6 +44,8 @@
                     { label: 'همه محصولات', icon: '#building-storefront' },
                     { label: 'شگفت انگیز ها', icon: '#percent-badge' },
                     { label: 'پر فروش ترین ها', icon: '#fire' },
+                    { label: 'درباره ما', icon: '#light-bulb'},
+                    { label: 'تماس با ما', icon: '#phone'}
                     ].map((item, index) => (
                     <li key={index}>
                         <Link href='' className="flex items-center gap-2 py-2 hover:text-black border-b-2 border-transparent hover:border-red-500 transition-all">

@@ -10,7 +10,7 @@ import 'swiper/css/pagination'
 
 export default function CarouselComponent() {
     return (
-    <section className="carousel_section">
+    <div className="carousel_section">
         <Swiper modules={[Pagination]} pagination={{ clickable: true }} >
             <SwiperSlide>
                 <Image src='/images/sliders/1.webp' width={2222} height={2222} alt='pic1' className='object-cover w-full h-full' />
@@ -28,6 +28,6 @@ export default function CarouselComponent() {
                 <Image src='/images/sliders/4.webp' width={2222} height={2222} alt='pic4' className='object-cover w-full h-full' />
             </SwiperSlide>
         </Swiper>
-    </section>
+    </div>
 )
 }

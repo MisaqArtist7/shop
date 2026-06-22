@@ -1,6 +1,6 @@
 
 import AmazingOfferComponent from '@/_components/ui/AmazingOffer/AmazingOffer';
-import BrandsComponent from '@/_components/ui/Brands/Brands';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -32,7 +32,26 @@ export default function HomePage() {
             </section>
 
             <section className='brands_section'>
-                <BrandsComponent />
+                <div className='container grid grid-cols-6 bg-white'>
+                    <div>
+                        <Image src='/images/brands/dahua.jpg' width={155} height={155} alt='' className='w-full h-full object-cover filter grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer' />
+                    </div>  
+                    <div>
+                        <Image src='/images/brands/briton.png' width={155} height={155} alt='' className='w-full h-full object-cover filter grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer' />
+                    </div>
+                    <div>
+                        <Image src='/images/brands/dahua.jpg' width={155} height={155} alt='' className='w-full h-full object-cover filter grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer' />
+                    </div> 
+                    <div>
+                        <Image src='/images/brands/briton.png' width={155} height={155} alt='' className='w-full h-full object-cover filter grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer' />
+                    </div>
+                    <div>
+                        <Image src='/images/brands/dahua.jpg' width={155} height={155} alt='' className='w-full h-full object-cover filter grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer' />
+                    </div> 
+                    <div>
+                        <Image src='/images/brands/briton.png' width={155} height={155} alt='' className='w-full h-full object-cover filter grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer' />
+                    </div>
+                </div>
             </section>
         </>
     )
