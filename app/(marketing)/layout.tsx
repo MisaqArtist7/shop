@@ -1,6 +1,6 @@
 import { Metadata } from "next"
-import Header from "@/_components/shared/Header/Header"
-import Footer from "@/_components/shared/Footer/Footer"
+import HeaderComponent from "@/_components/shared/Header/Header"
+import FooterComponent from "@/_components/shared/Footer/Footer"
 
 export const metadata: Metadata = {
     title: {
@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 export default function HomeLayout({children, }: Readonly<{ children : React.ReactNode }>) {
     return (
         <>
-            <Header />
+            <HeaderComponent />
             <main>{children}</main>
-            <Footer />
+            <FooterComponent />
         </>
     )
 }
