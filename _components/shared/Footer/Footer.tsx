@@ -29,8 +29,8 @@ export default function FooterComponent() {
                         { src: 'original-products', label: 'ضمانت اصل بودن' },
                     ].map((item, index) => (
                         <div key={index} className="flex flex-col items-center gap-5 rounded-2xl">
-                            <div className="w-20 h-20 bg-white border border-[#D92F4E]/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                                <Image src={`/images/footer/${item.src}.svg`} width={40} height={40} alt={item.label} className="w-10 h-10 opacity-80"/>
+                            <div className="w-22 h-22 bg-white border border-[#D92F4E]/30 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <Image src={`/images/footer/${item.src}.svg`} width={99} height={99} alt={item.label} className="w-16 h-16"/>
                             </div>
                             <span className="text-sm text-gray-700 font-bold">{item.label}</span>
                         </div>
