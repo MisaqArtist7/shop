@@ -10,6 +10,7 @@ export default function HomePage() {
             <section className='carousel_section container'>
                 
             </section>
+            
             <section className='offer_section container'>
                 <AmazingOfferComponent />
             </section>

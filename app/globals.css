@@ -1,7 +1,11 @@
 @import "tailwindcss";
 
 :root {
+  
+}
 
+body {
+  background: rgb(255, 251, 251);
 }
 
 /* Helper class */
