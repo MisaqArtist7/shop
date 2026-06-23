@@ -53,25 +53,33 @@ export default function HomePage() {
                 <BrandsComponent />
             </section>
 
-            <section className="py-20">
+            <section className="contact_section">
                 <div className="container mx-auto px-4">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                     
                     {/* سمت راست: اطلاعات تماس */}
                     <div className="space-y-6">
-                        <h2 className="text-3xl font-bold text-gray-900">با ما در ارتباط باشید</h2>
+                        <h2 className="flex items-center text-3xl p-4 rounded-xl text-white bg-[#D92F4E] transition-all font-bold">با ما در ارتباط باشید</h2>
                         <p className="text-gray-600">برای مشاوره رایگان یا استعلام قیمت محصولات، از راه‌های زیر با ما در تماس باشید.</p>
                         
                         <div className="space-y-4">
                         <div className="flex items-center gap-4">
-                            <div className="p-3 bg-blue-50 text-blue-600 rounded-lg">📞</div>
+                            <div className="p-3 bg-white text-[#D92F4E] rounded-lg shadow">
+                                <svg className='w-6 h-6'>
+                                    <use href='#phone-arrow-down-left'></use>
+                                </svg>
+                            </div>
                             <div>
                             <p className="text-sm text-gray-500">شماره تماس</p>
-                            <p className="font-semibold">+98 21 0000 0000</p>
+                            <a href='tel:۰۹۳۰۲۳۴۰۲۷۹' className="font-semibold">۰۹۳۰-۲۳۴۰-۲۷۹</a>
                             </div>
                         </div>
                         <div className="flex items-center gap-4">
-                            <div className="p-3 bg-blue-50 text-blue-600 rounded-lg">📧</div>
+                            <div className="p-3 bg-white text-[#D92F4E] rounded-lg shadow">
+                                <svg className='w-6 h-6'>
+                                    <use href='#envelope'></use>
+                                </svg>
+                            </div>
                             <div>
                             <p className="text-sm text-gray-500">ایمیل پشتیبانی</p>
                             <p className="font-semibold">info@yourdomain.com</p>
@@ -80,19 +88,41 @@ export default function HomePage() {
                         </div>
                     </div>
 
-                    {/* سمت چپ: فرم تماس (مینیمال) */}
-                    <form className="bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-sm">
-                        <div className="grid grid-cols-2 gap-4">
-                        <input type="text" placeholder="نام شما" className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#D92F4E] outline-none" />
-                        <input type="tel" placeholder="شماره تماس" className="p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#D92F4E] outline-none" />
+                    <div className="lg:w-[90%] lg:mr-auto">
+                        <div className="relative p-0.5 overflow-hidden rounded-3xl group">
+                        <div className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#F8FAFC_0%,#FFFFFF_30%,#D92F4E_50%,#FFFFFF_70%,#F8FAFC_100%)] group-hover:animate-[spin_2s_linear_infinite]" />
+                            <form className="relative bg-white p-8 rounded-[22px] z-10 space-y-4">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <input 
+                                type="text" 
+                                placeholder="نام شما" 
+                                className="p-3 rounded-lg border border-gray-300 focus:border-[#D92F4E] focus:ring-1 focus:ring-[#D92F4E] outline-none transition w-full" 
+                                />
+                                <input 
+                                type="tel" 
+                                placeholder="شماره تماس" 
+                                className="p-3 rounded-lg border border-gray-300 focus:border-[#D92F4E] focus:ring-1 focus:ring-[#D92F4E] outline-none transition w-full" 
+                                />
+                            </div>
+                            
+                            <textarea 
+                                placeholder="پیام خود را بنویسید..." 
+                                className="w-full border border-gray-300 p-3 h-32 rounded-lg focus:border-[#D92F4E] focus:ring-1 focus:ring-[#D92F4E] outline-none transition"
+                            ></textarea>
+                            
+                            <button 
+                                type="submit" 
+                                className="w-full text-white py-3 rounded-lg font-bold bg-[#D92F4E] transition duration-300 cursor-pointer text-center flex items-center justify-center gap-2"
+                            >
+                                <span>ارسال پیام</span>
+                            </button>
+                            </form>
                         </div>
-                        <textarea placeholder="پیام خود را بنویسید..." className="w-full border-gray-300 mt-4 p-3 h-32 rounded-lg border focus:ring-2 focus:ring-[#D92F4E] outline-none"></textarea>
-                        <button className="w-full mt-4 bg-[#D92F4E] text-white py-3 rounded-lg font-bold transition cursor-pointer">ارسال پیام</button>
-                    </form>
+                    </div>
 
                     </div>
                 </div>
-                </section>
+            </section>
         </>
     )
 }
