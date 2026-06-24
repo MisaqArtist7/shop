@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function FooterComponent() {
     return (
-        <footer className="bg-white border-t border-gray-100 mt-20">
+        <footer className="bg-white border-t border-gray-200 mt-4">
             <div className="container mx-auto px-6 pt-16 pb-8">
                 
                 {/* ۱. بخش بالایی: لوگو و تماس (بزرگتر و واضح‌تر) */}

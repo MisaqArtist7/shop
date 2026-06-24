@@ -10,7 +10,7 @@ import Link from 'next/link';
 export default function AmazingOfferComponent() {
 
     return (
-        <div className="offer_section mx-auto px-4 font-sans">
+        <div className="offer_section mx-auto px-4">
                 <div className="bg-[#D92F4E] grid grid-cols-1 md:grid-cols-[140px_1fr] gap-4 rounded-r-3xl rounded-l p-6 my-5">
                     
                     <div className="flex md:flex-col flex-row justify-between md:justify-center items-center gap-4">
@@ -36,24 +36,24 @@ export default function AmazingOfferComponent() {
                             breakpoints={{
                                 640: { slidesPerView: 3 },
                                 1024: { slidesPerView: 5 },
-                                1280: { slidesPerView: 6 },
+
                             }}
                         >
                             {Array.from({ length: 10 }).map((_, i) => (
                                 <SwiperSlide key={i}>
                                     <div className="bg-white rounded-xs p-4 flex flex-col items-center gap-3 h-full">
-                                        <Image src="/images/products/1.webp" width={222} height={222} alt="product" className="w-32 h-32 object-contain" />
-                                        <h2 className="text-gray-800 text-sm font-medium leading-6 line-clamp-2">
+                                        <Image src="/images/products/1.webp" width={222} height={222} alt="product" className="w-44 h-44 object-contain" />
+                                        <h2 className="text-gray-800 text-sm font-medium line-clamp-2">
                                             گوشی مدل آیفون ۱۷ پرو مکس
                                         </h2>
                                         <div className="w-full mt-auto">
-                                            <div className='flex items-center justify-end gap-1 w-full text-gray-900 font-bold text-sm'>
+                                            <div className='flex items-center justify-end gap-1 w-full text-gray-900 font-bold'>
                                                 <span>۳۶۸،۱۲۳،۴۵۶</span>
                                                 <svg className='w-4 h-4 text-gray-500'><use href='#toman'></use></svg>
                                             </div>
                                             <div className='flex items-center justify-between w-full mt-2'>
-                                                <span className='bg-[#de0c33] text-white px-2 py-0.5 rounded-full text-xs font-bold'>۳۵٪</span>
-                                                <span className='text-gray-400 line-through text-xs'>۳۷۰،۱۳۲،۶۵۸</span>
+                                                <span className='bg-[#de0c33] text-white px-2 py-0.5 rounded-full font-bold'>۳۵٪</span>
+                                                <span className='text-gray-400 line-through'>۳۷۰،۱۳۲،۶۵۸</span>
                                             </div>
                                         </div>
                                     </div>
