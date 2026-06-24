@@ -11,7 +11,7 @@ export default function ProductsComponent() {
         <div>
             <div className="flex items-center justify-between py-5">
                 <h2 className='px-4 py-2 rounded-xl text-white bg-[#D92F4E] transition-all font-bold text-sm'>محصولات جدید</h2>
-                <Link href='./' className="flex items-center px-4 py-2 rounded-xl bg-white text-[#D92F4E] hover:text-white hover:bg-[#D92F4E] transition-all font-bold text-sm">
+                <Link href='/offer' className="flex items-center px-4 py-2 rounded-xl bg-white text-[#D92F4E] hover:text-white hover:bg-[#D92F4E] transition-all font-bold text-sm">
                     مشاهده همه
                     <svg className="w-4 h-4">
                         <use href="#chevron-left"></use>

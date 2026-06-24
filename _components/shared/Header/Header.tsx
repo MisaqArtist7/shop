@@ -21,14 +21,14 @@ export default function HeaderComponent() {
     }, [])
 
     return (
-        <header className="bg-white border-b border-gray-100 sticky top-0 z-50 transition-all duration-300" dir="rtl">
+        <header className="bg-white border-b border-gray-100 shadow sticky top-0 z-50 transition-all duration-300">
             
             {/* نوار تبلیغاتی بالا */}
             <div className="w-full h-12 relative overflow-hidden">
                 <Image src='/images/top.webp' fill alt="تبلیغات" className="object-cover object-center" priority />
             </div>
         
-            <div className="container mx-auto px-6">
+            <div className="mx-auto px-11">
                 {/* بخش اصلی هدر */}
                 <div className="flex items-center justify-between py-5 gap-8">
                     
@@ -42,7 +42,7 @@ export default function HeaderComponent() {
                         <form action="" className="grow max-w-md relative hidden sm:block">
                             <input 
                                 type="search" 
-                                placeholder="جستجو در محصولات البرز سی‌ان‌سی..." 
+                                placeholder="جستجو در محصولات دیجی دوربین..." 
                                 className="w-full bg-gray-50 border border-gray-200 rounded-xl pr-11 pl-4 py-3 outline-none text-sm transition-all focus:border-[#D92F4E] focus:bg-white focus:ring-4 focus:ring-[#D92F4E]/10"
                             />
                             <svg className="w-5 h-5 absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
@@ -62,7 +62,7 @@ export default function HeaderComponent() {
                         <div className="w-px h-6 bg-gray-200"></div>
                         
                         {/* سبد خرید */}
-                        <Link href='/cart' className="p-3 hover:bg-gray-50 border border-transparent hover:border-gray-100 rounded-xl transition-all relative group">
+                        <Link href='/cart' className="p-3 bg-gray-100 border border-gray-100 rounded-xl transition-all relative group">
                             <svg className="w-6 h-6 text-gray-700 group-hover:text-[#D92F4E] transition-colors">
                                 <use href="#shopping-cart"></use>
                             </svg>
@@ -78,10 +78,9 @@ export default function HeaderComponent() {
                     <ul className="flex items-center gap-6 text-sm text-gray-600 font-medium">
                         {[
                             { label: 'دسته‌بندی‌ها', icon: '#bars-3-bottom-right', href: '' },
-                            { label: 'همه محصولات', icon: '#building-storefront', href: '' },
-                            { label: 'شگفت‌انگیزها', icon: '#percent-badge', highlight: true, href: '' },
+                            { label: 'شگفت‌انگیزها', icon: '#percent-badge', highlight: true, href: '/offer' },
                             { label: 'پرفروش‌ترین‌ها', icon: '#fire', href: '' },
-                            { label: 'درباره ما', icon: '#light-bulb', href: '/about-us' },
+                            { label: 'درباره ما', icon: '#building-storefront', href: '/about-us' },
                             { label: 'تماس با ما', icon: '#phone', href: '' }
                         ].map((item, index) => (
                             <li key={index}>
