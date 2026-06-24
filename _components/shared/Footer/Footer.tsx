@@ -63,9 +63,9 @@ export default function FooterComponent() {
                     </div>
 
                     {/* ستون خبرنامه */}
-                    <div className="col-span-2">
+                    <div className="col-span-2 font-medium">
                         <h4 className="font-black text-gray-900 mb-4 text-lg">عضویت در خبرنامه</h4>
-                        <p className="text-sm text-gray-500 mb-6 leading-6">با عضویت در خبرنامه از جدیدترین محصولات و تخفیف‌ها باخبر شوید.</p>
+                        <p className=" text-gray-500 mb-6 leading-6">با عضویت در خبرنامه از جدیدترین محصولات و تخفیف‌ها باخبر شوید.</p>
                         <div className="flex gap-2 max-w-md">
                             <input type="email" placeholder="ایمیل خود را وارد کنید" className="w-full bg-gray-50 border border-gray-200 rounded-xl px-5 py-4 text-sm outline-none focus:ring-2 focus:ring-[#D92F4E]/20" />
                             <button className="bg-[#D92F4E] text-white px-8 rounded-xl font-bold transition shadow-lg shadow-[#D92F4E]/30">عضویت</button>
@@ -73,7 +73,7 @@ export default function FooterComponent() {
                     </div>
                 </div>
 
-                <div className="text-center pt-6 text-sm text-gray-400 border-t-2 border-[#D92F4E]/10 mt-12">
+                <div className="text-center pt-6 font-medium text-sm text-gray-400 border-t-2 border-[#D92F4E]/10 mt-12">
                     <p>© ۱۴۰۳. تمامی حقوق برای البرز سی‌ان‌سی محفوظ است.</p>
                 </div>
             </div>
