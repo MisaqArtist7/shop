@@ -103,7 +103,7 @@ export default function HeaderComponent() {
             </div>
 
             {/* خط نئونی پرگرس چسبیده به کف هدر */}
-            <div className="absolute bottom-0 right-0 h-[2px] bg-[#D92F4E] transition-all duration-75 ease-out shadow-[0_0_8px_#D92F4E,0_0_15px_#D92F4E]" 
+            <div className="absolute bottom-0 right-0 h-0.5 bg-[#D92F4E] transition-all duration-75 ease-out shadow-[0_0_8px_#D92F4E,0_0_15px_#D92F4E]" 
                 style={{ width: `${scrollProgress}%` }} />
         </header>
     )
