@@ -16,11 +16,11 @@ export default function CarouselComponent() {
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
                 className="w-full h-full"
             >
-                {[1, 2, 3, 4].map((num) => (
+                {[1, 2, 3, 4, 5].map((num) => (
                     <SwiperSlide key={num}>
                         <Image 
                             src={`/images/sliders/${num}.webp`} 
-                            fill 
+                            fill
                             alt={`Slide ${num}`} 
                             className='object-cover' 
                         />

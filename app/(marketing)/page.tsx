@@ -13,6 +13,101 @@ export default function HomePage() {
                 <CarouselComponent />
             </section>
             
+            <section className='category_section container mx-auto px-5 py-10 text-gray-800'>
+                {/* هدر بخش دسته‌بندی با استایل مدرن‌تر و دکمه آرشیو */}
+                <div className="flex items-center justify-between mb-8 border-b border-gray-100 pb-4">
+                    <h2 className="font-bold text-lg md:text-xl text-gray-950 relative after:content-[''] after:absolute after:-bottom-[18px] after:right-0 after:w-16 after:h-0.5 after:bg-[#D92F4E]">
+                        دسته‌بندی‌های اصلی
+                    </h2>
+                </div>
+                
+                {/* گرید کاملاً ریسپانسیو */}
+                <div className='category_wrapper grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mt-5'>
+                    
+                    {/* آیتم اول: موبایل */}
+                    <Link href="" className='bg-white rounded-md p-5 shadow-sm hover:shadow-md shadow-orange-200 hover:border-gray-300 transition-all duration-300 group flex flex-col items-center justify-center text-center cursor-pointer'>
+                        {/* دایره‌ی پس‌زمینه تصویر با افکت پالس ملایم در هاور */}
+                        <div className='w-44 h-44 rounded-full bg-orange-50 flex items-center justify-center mb-4 relative transition-all duration-300 group-hover:bg-orange-100 group-hover:scale-105'>
+                            <Image 
+                                src='/images/category/mobile.webp' 
+                                width={180} 
+                                height={180} 
+                                alt='موبایل و گجت‌ها' 
+                                className='w-36 h-36 object-contain drop-shadow-md transition-transform duration-300 group-hover:-rotate-3' 
+                            />
+                        </div>
+                        <span className='text-xs sm:text-sm font-extrabold text-gray-700 group-hover:text-orange-600 transition-colors'>
+                            موبایل و گجت‌ها
+                        </span>
+                    </Link>
+
+                    {/* آیتم دوم: لپ‌تاپ */}
+                    <Link href="" className='bg-white rounded-md p-5 shadow-sm hover:shadow-md shadow-pink-200 hover:border-gray-300 transition-all duration-300 group flex flex-col items-center justify-center text-center cursor-pointer'>
+                        <div className='w-44 h-44 rounded-full bg-pink-50 flex items-center justify-center mb-4 relative transition-all duration-300 group-hover:bg-pink-100 group-hover:scale-105'>
+                            <Image 
+                                src='/images/category/laptop.webp' 
+                                width={180} 
+                                height={180} 
+                                alt='لپ‌تاپ و کامپیوتر' 
+                                className='w-36 h-36 object-contain drop-shadow-md transition-transform duration-300 group-hover:-rotate-3' 
+                            />
+                        </div>
+                        <span className='text-xs sm:text-sm font-extrabold text-gray-700 group-hover:text-pink-600 transition-colors'>
+                            لپ‌تاپ و کامپیوتر
+                        </span>
+                    </Link>
+
+                    {/* آیتم سوم: لوازم خانگی */}
+                    <Link href="" className='bg-white rounded-md p-5 shadow-sm hover:shadow-md hover:border-gray-300 transition-all duration-300 group flex flex-col items-center justify-center text-center cursor-pointer'>
+                        <div className='w-44 h-44 rounded-full bg-black/5 flex items-center justify-center mb-4 relative transition-all duration-300 group-hover:bg-black/20 group-hover:scale-105'>
+                            <Image 
+                                src='/images/category/appliances.webp' 
+                                width={180} 
+                                height={180} 
+                                alt='لوازم خانگی' 
+                                className='w-36 h-36 object-contain drop-shadow-md transition-transform duration-300 group-hover:-rotate-3' 
+                            />
+                        </div>
+                        <span className='text-xs sm:text-sm font-extrabold text-gray-700 group-hover:text-black transition-colors'>
+                            لوازم خانگی
+                        </span>
+                    </Link>
+
+                    {/* آیتم چهارم: تجهیزات روشنایی */}
+                    <Link href="" className='bg-white rounded-md p-5 shadow-sm hover:shadow-md shadow-yellow-200 hover:border-gray-300 transition-all duration-300 group flex flex-col items-center justify-center text-center cursor-pointer'>
+                        <div className='w-44 h-44 rounded-full bg-yellow-50 flex items-center justify-center mb-4 relative transition-all duration-300 group-hover:bg-yellow-100 group-hover:scale-105'>
+                            <Image 
+                                src='/images/category/lamp.webp' 
+                                width={180} 
+                                height={180} 
+                                alt='تجهیزات روشنایی' 
+                                className='w-36 h-36 object-contain drop-shadow-md transition-transform duration-300 group-hover:-rotate-3' 
+                            />
+                        </div>
+                        <span className='text-xs sm:text-sm font-extrabold text-gray-700 group-hover:text-yellow-600 transition-colors'>
+                            تجهیزات روشنایی
+                        </span>
+                    </Link>
+
+                    {/* آیتم پنجم: مکمل و سلامت */}
+                    <Link href="" className='bg-white rounded-md p-5 shadow-sm hover:shadow-md shadow-blue-200 hover:border-gray-300 transition-all duration-300 group flex flex-col items-center justify-center text-center cursor-pointer'>
+                        <div className='w-44 h-44 rounded-full bg-blue-50 flex items-center justify-center mb-4 relative transition-all duration-300 group-hover:bg-blue-100 group-hover:scale-105'>
+                            <Image 
+                                src='/images/category/whey.webp' 
+                                width={180} 
+                                height={180} 
+                                alt='مکمل و سلامت' 
+                                className='w-36 h-36 object-contain drop-shadow-md transition-transform duration-300 group-hover:-rotate-3' 
+                            />
+                        </div>
+                        <span className='text-xs sm:text-sm font-extrabold text-gray-700 group-hover:text-blue-600 transition-colors'>
+                            مکمل و سلامت
+                        </span>
+                    </Link>
+
+                </div>  
+            </section>
+
             <section className='offer_section container'>
                 <AmazingOfferComponent />
             </section>

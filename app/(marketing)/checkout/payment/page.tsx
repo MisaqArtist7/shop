@@ -1,6 +1,5 @@
 'use client'
 import { useState } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function PaymentPage() {
@@ -89,7 +88,7 @@ export default function PaymentPage() {
                             <span>۱۱۵۳۷۱۵۶۲۶</span>
                         </h2>
                     </div>
-                    
+
                     <div className="bg-white border border-gray-200 rounded-md p-5 shadow-sm space-y-4">
                         {/* هدر کوچک بخش مشخصات */}
                         <div className="flex items-center gap-2 pb-2 border-b border-gray-100">
@@ -102,23 +101,23 @@ export default function PaymentPage() {
 
                         {/* اطلاعات به صورت گرید منظم */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
-                            <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-md border border-gray-100">
+                            <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md border border-gray-100">
                                 <span className="text-gray-500 font-medium shrink-0">نام گیرنده:</span>
                                 <span className="font-bold text-gray-800">میثاق باباخانی</span>
                             </div>
 
-                            <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-md border border-gray-100">
+                            <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md border border-gray-100">
                                 <span className="text-gray-500 font-medium shrink-0">شماره تماس:</span>
                                 <span className="font-bold text-gray-800 tracking-wide">۰۹۳۰۲۳۴۰۲۷۹</span>
                             </div>
 
-                            <div className="flex items-center gap-2 bg-gray-50 p-3 rounded-md border border-gray-100">
+                            <div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md border border-gray-100">
                                 <span className="text-gray-500 font-medium shrink-0">بازه تحویل:</span>
                                 <span className="font-bold text-[#D92F4E]">۳ تا ۵ روز کاری</span>
                             </div>
 
                             {/* بخش آدرس (به صورت عریض در کل عرض گرید) */}
-                            <div className="sm:col-span-2 flex items-start gap-2 bg-gray-50 p-3 rounded-md border border-gray-100">
+                            <div className="sm:col-span-2 flex items-start gap-2 bg-gray-100 p-3 rounded-md border border-gray-100">
                                 <span className="text-gray-500 font-medium shrink-0">آدرس گیرنده:</span>
                                 <span className="font-bold text-gray-800 leading-relaxed">
                                     تهران، بزرگراه فتح، نبش خیابان هفدهم، مجتمع صنعتی البرز، پلاک ۱۲، واحد ۴
