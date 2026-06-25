@@ -5,16 +5,17 @@ export default function CreateProductPage() {
     return (
         <>
             {/* هدر بالا */}
-            <header className="bg-white border-b border-gray-100 shadow-sm flex items-center justify-between px-8 py-4 sticky top-0 z-50">
-                <div className="flex items-center gap-6">
+                <header className="bg-white border-b border-gray-100 shadow-sm flex items-center justify-between px-8 py-4 sticky top-0 z-50" dir="rtl">
+                <div className="flex items-center gap-6 grow">
                     <Link href="/">
                         <Image src='/images/logo.svg' width={140} height={45} alt="البرز سی‌ان‌سی" className="h-9 w-auto cursor-pointer"/>
                     </Link>
-                    <form action="" className="grow max-w-xs relative hidden sm:block">
+                    
+                    <form action="" className="w-full max-w-xs relative hidden sm:block transition-all duration-300 ease-in-out focus-within:max-w-md">
                         <input 
                             type="search" 
                             placeholder="جستجو..." 
-                            className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-10 pl-4 py-2.5 outline-none text-sm transition-all focus:border-[#D92F4E] focus:bg-white focus:ring-4 focus:ring-[#D92F4E]/10"
+                            className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-10 pl-4 py-2.5 outline-none text-sm transition-all focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10"
                         />
                         <svg className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
                             <use href="#searchIcon"></use>
@@ -22,7 +23,7 @@ export default function CreateProductPage() {
                     </form>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 shrink-0">
                     <button className="bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-100 p-2.5 text-gray-500 transition-colors cursor-pointer">
                         <svg className="w-5 h-5"><use href="#bell"></use></svg>
                     </button>
@@ -53,6 +54,7 @@ export default function CreateProductPage() {
                                 { label: 'مدیریت محصولات', icon: '#building-storefront', href: '/admin/products/manage-products' },
                                 { label: 'افزودن محصول جدید', icon: '#plus-circle', href: '/admin/products/create', active: true },
                                 { label: 'افزودن دسته‌بندی', icon: '#tag', href: '/admin/products/category'},
+                                { label: 'لیست کاربران', icon: '#users', href: '/admin/users' }
                             ].map((item, index) => (
                                 <li key={index}>
                                     <Link 
@@ -84,7 +86,7 @@ export default function CreateProductPage() {
                 {/* بخش فرم اصلی (بزرگ‌تر و چند ستونه) */}
                 <div className="flex-1 bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-8 border border-gray-100">
                     <div className="mb-8 pb-4 border-b border-gray-50 flex justify-between items-center">
-                        <h1 className="text-xl font-black text-gray-900">افزودن محصول جدید</h1>
+                        <h1 className="text-xl font-black text-gray-900">فروشگاه - افزودن محصول جدید</h1>
                         <span className="text-xs font-medium text-gray-400 bg-gray-50 px-3 py-1.5 rounded-md">مرحله ۱ از ۲</span>
                     </div>
                     
