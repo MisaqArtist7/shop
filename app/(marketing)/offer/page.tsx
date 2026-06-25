@@ -81,7 +81,7 @@ export default function OfferPage() {
                     </div>
 
                     {/* گرید محصولات (تصاویر به صورت زنده با Next/Image هندل شدند) */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-1">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-1">
                         
                         {/* این بخش روی دیتای ورودی مپ می‌شود */}
                         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((item) => (

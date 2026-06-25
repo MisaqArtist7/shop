@@ -62,7 +62,7 @@ export default function HeaderComponent() {
                         <div className="w-px h-6 bg-gray-200"></div>
                         
                         {/* سبد خرید */}
-                        <Link href='/cart' className="p-3 bg-gray-100 border border-gray-100 rounded-xl transition-all relative group">
+                        <Link href='/checkout/cart' className="p-3 bg-gray-100 border border-gray-100 rounded-xl transition-all relative group">
                             <svg className="w-6 h-6 text-gray-700 group-hover:text-[#D92F4E] transition-colors">
                                 <use href="#shopping-cart"></use>
                             </svg>

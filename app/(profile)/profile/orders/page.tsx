@@ -1,17 +1,17 @@
 import Link from "next/link"
 import Image from "next/image"
 
-export default function ProfilePage() {
-    // دیتای نمونه از سفارش‌های خریدار (میثاق باباخانی)
-    const ordersSample = [
-        { id: "OR-8821", date: "۱۴۰۵/۰۳/۱۵", total: "۱۸,۵۰۰,۰۰۰", payment: "پرداخت شده", status: "در حال پردازش", statusStyle: "bg-amber-50 text-amber-600" },
-        { id: "OR-7410", date: "۱۴۰۴/۱۱/۰۲", total: "۴,۲۰۰,۰۰۰", payment: "پرداخت شده", status: "تحویل شده", statusStyle: "bg-emerald-50 text-emerald-600" },
-        { id: "OR-6302", date: "۱۴۰۴/۰۸/۲۲", total: "۸۵۰,۰۰۰", payment: "ناموفق", status: "لغو شده", statusStyle: "bg-rose-50 text-rose-600" }
+export default function OrdersPage() {
+    // دیتای نمونه سفارشات خریدار
+    const allOrders = [
+        { id: "OR-8821", date: "۱۴۰۵/۰۳/۱۵", total: "۱۸,۵۰۰,۰۰۰", count: "۱ کالا", payment: "انلاین", status: "در حال پردازش", statusStyle: "bg-amber-50 text-amber-600" },
+        { id: "OR-7410", date: "۱۴۰۴/۱۱/۰۲", total: "۴,۲۰۰,۰۰۰", count: "۳ کالا", payment: "آنلاین", status: "تحویل شده", statusStyle: "bg-emerald-50 text-emerald-600" },
+        { id: "OR-6302", date: "۱۴۰۴/۰۸/۲۲", total: "۸۵۰,۰۰۰", count: "۲ کالا", payment: "کارت به کارت", status: "لغو شده", statusStyle: "bg-rose-50 text-rose-600" }
     ];
 
     return (
         <>
-            <section className="min-h-screen flex gap-8 p-6 md:p-8 font-semibold" dir="rtl">         
+            <section className="min-h-screen bg-gray-50 flex gap-8 p-6 md:p-8 font-semibold" dir="rtl">         
                 
                 {/* سایدبار خریدار */}
                 <aside className="w-80 bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 flex flex-col shrink-0 border border-gray-100">
@@ -28,8 +28,8 @@ export default function ProfilePage() {
                     <nav className="mt-6 flex-1">
                         <ul className="flex flex-col gap-2">
                             {[
-                                { label: 'میز کار', icon: '#squares-2x2', href: '/profile', active: true },
-                                { label: 'سفارش ها', icon: '#shopping-bag', href: '/profile/orders' },
+                                { label: 'میز کار', icon: '#squares-2x2', href: '/profile' },
+                                { label: 'سفارش ها', icon: '#shopping-bag', href: '/profile/orders', active: true },
                                 { label: 'لیست های من', icon: '#heart', href: '/profile/lists' },
                                 { label: 'آدرس ها', icon: '#building-library', href: '/profile/addresses' },
                                 { label: 'اطلاعات حساب کاربری', icon: '#identification', href: '/profile/personal-info' },
@@ -55,59 +55,59 @@ export default function ProfilePage() {
                     </nav>
                 </aside>
             
-                {/* بخش اصلی سفارش‌های کاربر */}
+                {/* بخش اصلی سفارش‌ها */}
                 <div className="flex-1 flex flex-col gap-6">
                     
-                    {/* دیو اول: کارت‌های خلاصه وضعیت سفارش‌ها */}
-                    <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 border border-gray-100">
-                        <div className="mb-6 pb-4 border-b border-gray-50 flex justify-between items-center">
-                            <h1 className="text-xl font-black text-gray-900">تاریخچه سفارش‌ها</h1>
-                            <span className="text-xs font-medium text-gray-400 bg-gray-50 px-3 py-1.5 rounded-md">خلاصه وضعیت خریدها</span>
+                    {/* دیو اول: فیلترها و ناوبری وضعیت سفارشات */}
+                    <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 border border-gray-100 space-y-5">
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-gray-50 pb-4">
+                            <h1 className="text-xl font-black text-gray-900">مدیریت سفارش‌ها</h1>
+                            
+                            {/* باکس جستجوی فاکتور */}
+                            <div className="w-full md:w-72 relative">
+                                <input 
+                                    type="text" 
+                                    placeholder="جستجوی کد سفارش..." 
+                                    className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-9 pl-4 py-2.5 outline-none text-xs transition-all focus:border-[#D92F4E] focus:bg-white"
+                                />
+                                <svg className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
+                                    <use href="#searchIcon"></use>
+                                </svg>
+                            </div>
                         </div>
-                        
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            {[
-                                { label: "سفارش‌های جاری", count: "۱ سفارش", color: "text-amber-600", bg: "bg-amber-50" },
-                                { label: "تحویل شده", count: "۱ سفارش", color: "text-emerald-600", bg: "bg-emerald-50" },
-                                { label: "لغو شده / مرجوعی", count: "۱ سفارش", color: "text-rose-600", bg: "bg-rose-50" },
-                            ].map((box, i) => (
-                                <div key={i} className="border border-gray-100 rounded-2xl p-4 flex items-center justify-between bg-gray-50/30">
-                                    <span className="text-xs text-gray-500 font-bold">{box.label}</span>
-                                    <span className={`text-xs font-black px-2.5 py-1 rounded-lg ${box.bg} ${box.color}`}>{box.count}</span>
-                                </div>
-                            ))}
+
+                        {/* تب‌های تفکیک وضعیت بر اساس استایل دکمه‌های مینی‌مال */}
+                        <div className="flex flex-wrap gap-2 text-xs">
+                            <button className="bg-[#D92F4E] text-white px-4 py-2.5 rounded-xl font-bold shadow-md shadow-[#D92F4E]/10 cursor-pointer">همه خریدها</button>
+                            <button className="bg-gray-50 hover:bg-gray-100 text-gray-600 px-4 py-2.5 rounded-xl font-bold transition-colors cursor-pointer">جاری (در حال پردازش)</button>
+                            <button className="bg-gray-50 hover:bg-gray-100 text-gray-600 px-4 py-2.5 rounded-xl font-bold transition-colors cursor-pointer">تحویل داده شده</button>
+                            <button className="bg-gray-50 hover:bg-gray-100 text-gray-600 px-4 py-2.5 rounded-xl font-bold transition-colors cursor-pointer">لغو شده</button>
                         </div>
                     </div>
 
-                    {/* دیو دوم: جدول نمایش جزئیات سفارش‌ها */}
+                    {/* دیو دوم: جدول اصلی لیست سفارشات */}
                     <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl border border-gray-100 overflow-hidden">
-                        <div className="px-6 py-5 border-b border-gray-50 bg-gray-50/50">
-                            <h2 className="font-black text-gray-900 text-base">لیست کل سفارش‌های من</h2>
-                        </div>
-
                         <div className="overflow-x-auto">
                             <table className="w-full text-right border-collapse text-sm">
                                 <thead>
                                     <tr className="bg-gray-50/50 text-gray-400 font-bold border-b border-gray-100">
-                                        <th className="p-4">شماره سفارش</th>
-                                        <th className="p-4">تاریخ ثبت</th>
+                                        <th className="p-4">کد سفارش</th>
+                                        <th className="p-4">تاریخ ثبت سفارش</th>
+                                        <th className="p-4">تعداد کالاها</th>
                                         <th className="p-4">مبلغ کل (تومان)</th>
-                                        <th className="p-4">وضعیت پرداخت</th>
-                                        <th className="p-4 text-center">وضعیت ارسال</th>
+                                        <th className="p-4">نوع پرداخت</th>
+                                        <th className="p-4 text-center">وضعیت سفارش</th>
                                         <th className="p-4 text-center">عملیات</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-50 font-medium text-gray-700">
-                                    {ordersSample.map((order) => (
+                                    {allOrders.map((order) => (
                                         <tr key={order.id} className="hover:bg-gray-50/70 transition-colors">
-                                            <td className="p-4 font-bold text-gray-900 font-mono">{order.id}</td>
-                                            <td className="p-4 text-gray-500">{order.date}</td>
+                                            <td className="p-4 font-bold text-gray-900 font-mono text-sm">{order.id}</td>
+                                            <td className="p-4 text-gray-500 text-xs">{order.date}</td>
+                                            <td className="p-4 text-gray-600 text-xs">{order.count}</td>
                                             <td className="p-4 text-gray-900 font-black">{order.total}</td>
-                                            <td className="p-4">
-                                                <span className={`text-xs font-bold ${order.payment === 'پرداخت شده' ? 'text-emerald-600' : 'text-rose-500'}`}>
-                                                    {order.payment}
-                                                </span>
-                                            </td>
+                                            <td className="p-4 text-gray-500 text-xs">{order.payment}</td>
                                             <td className="p-4 text-center">
                                                 <span className={`px-3 py-1 rounded-full text-xs font-bold ${order.statusStyle}`}>
                                                     {order.status}
@@ -115,7 +115,7 @@ export default function ProfilePage() {
                                             </td>
                                             <td className="p-4 text-center">
                                                 <button className="text-xs font-bold text-[#D92F4E] hover:bg-[#D92F4E]/5 border border-[#D92F4E]/20 px-3 py-1.5 rounded-lg transition-all cursor-pointer">
-                                                    مشاهده فاکتور
+                                                    جزئیات فاکتور
                                                 </button>
                                             </td>
                                         </tr>
