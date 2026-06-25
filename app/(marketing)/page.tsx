@@ -107,7 +107,7 @@ export default function HomePage() {
 
                 </div>  
             </section>
-
+            
             <section className='offer_section container'>
                 <AmazingOfferComponent />
             </section>

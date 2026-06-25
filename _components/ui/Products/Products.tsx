@@ -33,11 +33,14 @@ export default function ProductsComponent() {
                     breakpoints={{
                         640: { slidesPerView: 3 },
                         1024: { slidesPerView: 5 },
-                        1280: { slidesPerView: 6 },
+                        1300: { slidesPerView: 6 },
+                        1800: { slidesPerView: 7 },
                     }}
                     >
         
                     {[
+                        {Title: 'گوشی مدل آیفون ۱۷ پرو مکس', Img: '/images/products/1.webp', price: '۳۶۸،۱۲۳،۴۵۶'},
+                        {Title: 'گوشی مدل آیفون ۱۷ پرو مکس', Img: '/images/products/1.webp', price: '۳۶۸،۱۲۳،۴۵۶'},
                         {Title: 'گوشی مدل آیفون ۱۷ پرو مکس', Img: '/images/products/1.webp', price: '۳۶۸،۱۲۳،۴۵۶'},
                         {Title: 'گوشی مدل آیفون ۱۷ پرو مکس', Img: '/images/products/1.webp', price: '۳۶۸،۱۲۳،۴۵۶'},
                         {Title: 'گوشی مدل آیفون ۱۷ پرو مکس', Img: '/images/products/1.webp', price: '۳۶۸،۱۲۳،۴۵۶'},

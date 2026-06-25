@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 
-export default function AdminPage() {
+export default function CreateCategoryPage() {
     return (
         <>
             {/* هدر بالا (کاملاً هماهنگ با تم) */}
@@ -49,10 +49,10 @@ export default function AdminPage() {
                     <nav className="mt-6 flex-1">
                         <ul className="flex flex-col gap-2">
                             {[
-                                { label: 'میز کار', icon: '#squares-2x2', href: '/admin', active: true },
+                                { label: 'میز کار', icon: '#squares-2x2', href: '/admin' },
                                 { label: 'مدیریت محصولات', icon: '#building-storefront', href: '/admin/products/manage-products' },
                                 { label: 'افزودن محصول جدید', icon: '#plus-circle', href: '/admin/products/create' },
-                                { label: 'افزودن دسته‌بندی', icon: '#tag', href: '/admin/products/category' },
+                                { label: 'افزودن دسته‌بندی', icon: '#tag', href: '/admin/products/category', active: true },
                             ].map((item, index) => (
                                 <li key={index}>
                                     <Link 

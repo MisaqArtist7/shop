@@ -36,7 +36,8 @@ export default function AmazingOfferComponent() {
                             breakpoints={{
                                 640: { slidesPerView: 3 },
                                 1024: { slidesPerView: 5 },
-
+                                1300: { slidesPerView: 6 },
+                                1800: { slidesPerView: 7 },
                             }}
                         >
                             {Array.from({ length: 10 }).map((_, i) => (
