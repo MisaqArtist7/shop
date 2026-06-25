@@ -81,7 +81,7 @@ export default function HeaderComponent() {
                             { label: 'شگفت‌انگیزها', icon: '#percent-badge', highlight: true, href: '/offer' },
                             { label: 'پرفروش‌ترین‌ها', icon: '#fire', href: '' },
                             { label: 'درباره ما', icon: '#building-storefront', href: '/about-us' },
-                            { label: 'تماس با ما', icon: '#phone', href: '' }
+                            { label: 'تماس با ما', icon: '#phone', href: 'contact-us' }
                         ].map((item, index) => (
                             <li key={index}>
                                 <Link 

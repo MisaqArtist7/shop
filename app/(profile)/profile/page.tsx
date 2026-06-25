@@ -1,23 +1,30 @@
 import Link from "next/link"
 import Image from "next/image"
 
-export default function ProfilePage() {
-    // دیتای نمونه از سفارش‌های خریدار (میثاق باباخانی)
-    const ordersSample = [
-        { id: "OR-8821", date: "۱۴۰۵/۰۳/۱۵", total: "۱۸,۵۰۰,۰۰۰", payment: "پرداخت شده", status: "در حال پردازش", statusStyle: "bg-amber-50 text-amber-600" },
-        { id: "OR-7410", date: "۱۴۰۴/۱۱/۰۲", total: "۴,۲۰۰,۰۰۰", payment: "پرداخت شده", status: "تحویل شده", statusStyle: "bg-emerald-50 text-emerald-600" },
-        { id: "OR-6302", date: "۱۴۰۴/۰۸/۲۲", total: "۸۵۰,۰۰۰", payment: "ناموفق", status: "لغو شده", statusStyle: "bg-rose-50 text-rose-600" }
+export default function ProfileDashboard() {
+    // خلاصه دیتای آخرین سفارش برای نمایش سریع در میز کار
+    const latestOrdersSample = [
+        { id: "OR-8821", date: "۱۴۰۵/۰۳/۱۵", total: "۱۸,۵۰۰,۰۰۰", status: "در حال پردازش", statusStyle: "bg-amber-50 text-amber-600" },
+        { id: "OR-7410", date: "۱۴۰۴/۱۱/۰۲", total: "۴,۲۰۰,۰۰۰", status: "تحویل شده", statusStyle: "bg-emerald-50 text-emerald-600" }
     ];
+
+    // اطلاعات کاربری و آدرس اصلی
+    const customerSummary = {
+        name: "میثاق باباخانی",
+        phone: "۰۹۱۲۳۴۵۶۷۸۹",
+        email: "misagh@example.com",
+        mainAddress: "تهران، پونک، خیابان مخبری، پلاک ۴۵، طبقه ۳، واحد ۶"
+    };
 
     return (
         <>
-            <section className="min-h-screen flex gap-8 p-6 md:p-8 font-semibold" dir="rtl">         
+            <section className="min-h-screen bg-gray-50 flex gap-8 p-6 md:p-8 font-medium">         
                 
-                {/* سایدبار خریدار */}
+                {/* سایدبار مشتری */}
                 <aside className="w-80 bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 flex flex-col shrink-0 border border-gray-100">
                     <div className="flex flex-col items-center text-center gap-3 pb-6 border-b border-gray-100">
                         <div className="relative w-24 h-24 rounded-full p-1 border-2 border-[#D92F4E]/20">
-                            <Image src='/images/admin.jpg' fill alt="تصویر کاربر" className="object-cover rounded-full" />
+                            <Image src='/images/admin.jpg' fill alt="تصویر پروفایل مشتری" className="object-cover rounded-full" />
                         </div>
                         <div>
                             <h2 className="font-black text-gray-900 text-base">میثاق باباخانی</h2>
@@ -55,74 +62,93 @@ export default function ProfilePage() {
                     </nav>
                 </aside>
             
-                {/* بخش اصلی سفارش‌های کاربر */}
+                {/* بخش اصلی میز کار */}
                 <div className="flex-1 flex flex-col gap-6">
                     
-                    {/* دیو اول: کارت‌های خلاصه وضعیت سفارش‌ها */}
-                    <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 border border-gray-100">
-                        <div className="mb-6 pb-4 border-b border-gray-50 flex justify-between items-center">
-                            <h1 className="text-xl font-black text-gray-900">تاریخچه سفارش‌ها</h1>
-                            <span className="text-xs font-medium text-gray-400 bg-gray-50 px-3 py-1.5 rounded-md">خلاصه وضعیت خریدها</span>
+                    {/* ردیف اول: آمار کلی و خوش‌آمد گویی سریع */}
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div className="bg-white border border-gray-100 rounded-3xl p-5 flex flex-col justify-center shadow-sm shadow-gray-200/40">
+                            <span className="text-xs text-gray-400 block mb-1">خوش‌آمدید حجی!</span>
+                            <h1 className="text-base font-black text-gray-900">{customerSummary.name}</h1>
                         </div>
-                        
-                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            {[
-                                { label: "سفارش‌های جاری", count: "۱ سفارش", color: "text-amber-600", bg: "bg-amber-50" },
-                                { label: "تحویل شده", count: "۱ سفارش", color: "text-emerald-600", bg: "bg-emerald-50" },
-                                { label: "لغو شده / مرجوعی", count: "۱ سفارش", color: "text-rose-600", bg: "bg-rose-50" },
-                            ].map((box, i) => (
-                                <div key={i} className="border border-gray-100 rounded-2xl p-4 flex items-center justify-between bg-gray-50/30">
-                                    <span className="text-xs text-gray-500 font-bold">{box.label}</span>
-                                    <span className={`text-xs font-black px-2.5 py-1 rounded-lg ${box.bg} ${box.color}`}>{box.count}</span>
-                                </div>
-                            ))}
+                        <div className="bg-white border border-gray-100 rounded-3xl p-5 flex items-center justify-between shadow-sm shadow-gray-200/40">
+                            <span className="text-xs text-gray-500 font-bold">سفارش‌های در جریان:</span>
+                            <span className="text-xs font-black px-2.5 py-1 rounded-lg bg-amber-50 text-amber-600">۱ سفارش</span>
+                        </div>
+                        <div className="bg-white border border-gray-100 rounded-3xl p-5 flex items-center justify-between shadow-sm shadow-gray-200/40">
+                            <span className="text-xs text-gray-500 font-bold">کل خریدهای موفق:</span>
+                            <span className="text-xs font-black px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-600">۱ سفارش</span>
                         </div>
                     </div>
 
-                    {/* دیو دوم: جدول نمایش جزئیات سفارش‌ها */}
-                    <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl border border-gray-100 overflow-hidden">
-                        <div className="px-6 py-5 border-b border-gray-50 bg-gray-50/50">
-                            <h2 className="font-black text-gray-900 text-base">لیست کل سفارش‌های من</h2>
+                    {/* ردیف دوم: جدول آخرین سفارش‌ها به صورت تمام‌عرض */}
+                    <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl border border-gray-100 overflow-hidden w-full">
+                        <div className="px-6 py-5 border-b border-gray-50 flex justify-between items-center bg-gray-50/50">
+                            <h2 className="font-black text-gray-900 text-sm">آخرین سفارش‌های من</h2>
+                            <Link href="/profile/orders" className="text-xs text-[#D92F4E] hover:underline">مشاهده همه سفارش‌ها</Link>
                         </div>
-
                         <div className="overflow-x-auto">
                             <table className="w-full text-right border-collapse text-sm">
                                 <thead>
-                                    <tr className="bg-gray-50/50 text-gray-400 font-bold border-b border-gray-100">
-                                        <th className="p-4">شماره سفارش</th>
+                                    <tr className="bg-gray-50/30 text-gray-400 font-bold border-b border-gray-100 text-xs">
+                                        <th className="p-4">کد سفارش</th>
                                         <th className="p-4">تاریخ ثبت</th>
                                         <th className="p-4">مبلغ کل (تومان)</th>
-                                        <th className="p-4">وضعیت پرداخت</th>
                                         <th className="p-4 text-center">وضعیت ارسال</th>
-                                        <th className="p-4 text-center">عملیات</th>
                                     </tr>
                                 </thead>
-                                <tbody className="divide-y divide-gray-50 font-medium text-gray-700">
-                                    {ordersSample.map((order) => (
-                                        <tr key={order.id} className="hover:bg-gray-50/70 transition-colors">
+                                <tbody className="divide-y divide-gray-50 text-gray-600 font-medium">
+                                    {latestOrdersSample.map((order) => (
+                                        <tr key={order.id} className="hover:bg-gray-50/50 transition-colors">
                                             <td className="p-4 font-bold text-gray-900 font-mono">{order.id}</td>
-                                            <td className="p-4 text-gray-500">{order.date}</td>
+                                            <td className="p-4 text-xs">{order.date}</td>
                                             <td className="p-4 text-gray-900 font-black">{order.total}</td>
-                                            <td className="p-4">
-                                                <span className={`text-xs font-bold ${order.payment === 'پرداخت شده' ? 'text-emerald-600' : 'text-rose-500'}`}>
-                                                    {order.payment}
-                                                </span>
-                                            </td>
                                             <td className="p-4 text-center">
                                                 <span className={`px-3 py-1 rounded-full text-xs font-bold ${order.statusStyle}`}>
                                                     {order.status}
                                                 </span>
-                                            </td>
-                                            <td className="p-4 text-center">
-                                                <button className="text-xs font-bold text-[#D92F4E] hover:bg-[#D92F4E]/5 border border-[#D92F4E]/20 px-3 py-1.5 rounded-lg transition-all cursor-pointer">
-                                                    مشاهده فاکتور
-                                                </button>
                                             </td>
                                         </tr>
                                     ))}
                                 </tbody>
                             </table>
                         </div>
+                    </div>
+
+                    {/* ردیف سوم: دو باکس خلاصه اطلاعات کاربری و آدرس در کنار هم */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        {/* باکس اطلاعات حساب کاربری */}
+                        <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 border border-gray-100 space-y-4 flex flex-col justify-between">
+                            <div className="flex items-center justify-between border-b border-gray-50 pb-3">
+                                <h3 className="font-black text-gray-900 text-xs flex items-center gap-1.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#D92F4E]"></span>
+                                    اطلاعات حساب مشتری
+                                </h3>
+                                <Link href="/profile/personal-info" className="text-xs text-gray-400 hover:text-black">ویرایش مشخصات</Link>
+                            </div>
+                            <div className="text-xs space-y-3 py-1">
+                                <p className="text-gray-600"><span className="text-gray-400 ml-2 font-bold">تلفن همراه:</span><span className="font-mono text-gray-900 font-bold">{customerSummary.phone}</span></p>
+                                <p className="text-gray-600"><span className="text-gray-400 ml-2 font-bold">آدرس ایمیل:</span><span className="font-mono text-gray-900 font-bold">{customerSummary.email}</span></p>
+                            </div>
+                        </div>
+
+                        {/* باکس نشانی پیش‌فرض ارسال بار */}
+                        <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 border border-gray-100 space-y-4 flex flex-col justify-between">
+                            <div className="flex items-center justify-between border-b border-gray-50 pb-3">
+                                <h3 className="font-black text-gray-900 text-xs flex items-center gap-1.5">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#D92F4E]"></span>
+                                    نشانی اصلی تحویل بار
+                                </h3>
+                                <Link href="/profile/addresses" className="text-xs text-gray-400 hover:text-black">مدیریت آدرس‌ها</Link>
+                            </div>
+                            <div className="py-1">
+                                <p className="text-xs text-gray-600 leading-6 font-medium line-clamp-2">
+                                    {customerSummary.mainAddress}
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
 
                 </div>

@@ -5,7 +5,11 @@ import ProductsComponent from '@/_components/ui/Products/Products';
 import BrandsComponent from '@/_components/ui/Brands/Brands';
 import Image from 'next/image';
 import Link from 'next/link';
-
+const articlesSample = [
+        { id: 1, title: "راهنمای جامع نگهداری و روان‌کاری اسپیندل‌های HQD", slug: "hqd-spindle-maintenance", date: "۰۳ تیر ۱۴۰۵", cat: "آموزشی", desc: "روان‌کاری اصولی اسپیندل می‌تواند عمر مفید قطعات سی‌ان‌سی شما را تا دو برابر افزایش دهد. در این مقاله به بررسی...", image: "/images/blog-1.jpg" },
+        { id: 2, title: "چگونه بهترین اینسرت الماسه را برای تراشکاری فولاد انتخاب کنیم؟", slug: "choosing-carbide-inserts", date: "۲۸ خرداد ۱۴۰۵", cat: "راهنمای خرید", desc: "انتخاب گرید مناسب تنگستن کارباید نقش کلیدی در کیفیت خروجی قطعه و کاهش استهلاک دستگاه دارد. بررسی فاکتورهای...", image: "/images/blog-2.jpg" },
+        { id: 3, title: "آشنایی با کدهای خطای رایج در کنترلرهای صنعتی CNC", slug: "cnc-controller-error-codes", date: "۱۵ خرداد ۱۴۰۵", cat: "فنی و تخصصی", desc: "عیب‌یابی سریع خطاهای کنترلر کارهای کارگاه را جلو می‌اندازد. در این بخش مهم‌ترین کدهای خطا و راهکار رفع آن‌ها را...", image: "/images/blog-3.jpg" }
+    ];
 export default function HomePage() {
     return (
         <>
@@ -146,6 +150,81 @@ export default function HomePage() {
 
             <section className='brands_section mt-4'>
                 <BrandsComponent />
+            </section>  
+
+            <section className='articles_section mt-4'>
+                <div className="container rounded-3xl p-6 md:p-8 border border-gray-100 shadow-sm shadow-gray-100/50">
+                
+                {/* هدر بخش مقالات شامل عنوان و دکمه مشاهده همه */}
+                <div className="flex justify-between items-center border-b border-gray-50 pb-5 mb-6 font-semibold">
+                    <div className="space-y-1">
+                        <h2 className="text-lg md:text-xl font-black text-gray-900 flex items-center gap-2">
+                            <span className="w-2.5 h-2.5 rounded-md bg-[#D92F4E]"></span>
+                            آخرین مقالات و مجله تخصصی
+                        </h2>
+                        <p className="text-xs text-gray-400 font-medium">به‌روزترین آموزش‌ها و راهنمای فنی تجهیزات سی‌ان‌سی</p>
+                    </div>
+                    
+                    <Link 
+                        href="/blog" 
+                        className="flex items-center px-4 py-2 rounded-xl text-white bg-[#D92F4E] transition-all font-bold text-sm"
+                    >
+                        مشاهده همه مقالات
+                        <svg className="w-4 h-4">
+                            <use href="#chevron-left"></use>
+                        </svg>
+                    </Link>
+                </div>
+
+                {/* گرید کارت‌های وبلاگ */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 font-semibold">
+                    {articlesSample.map((article) => (
+                        <article key={article.id} className="border bg-white border-gray-100 rounded-3xl p-4 shadow-sm shadow-gray-100/30 flex flex-col justify-between hover:border-gray-200 hover:shadow-md hover:shadow-gray-200/20 transition-all group">
+                            
+                            <div className="space-y-4">
+                                {/* تصویر مقاله با هاور زوم افکت */}
+                                <Link href='/blogs' className="block w-full h-48 bg-gray-50 rounded-2xl relative overflow-hidden cursor-pointer">
+                                    <div className="absolute inset-0 bg-gray-900/5 z-10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                                    <div className="absolute text-gray-300 text-xs font-bold inset-0 flex items-center justify-center">تصویر مقاله</div>
+                                    {/* بعد از ست کردن تصاویر پروژه سورس زیر لود می‌شود: */}
+                                    {/* <Image src={article.image} fill className="object-cover group-hover:scale-105 transition-transform duration-500" alt={article.title} /> */}
+                                </Link>
+
+                                {/* دسته‌بندی و تاریخ */}
+                                <div className="flex items-center justify-between text-[11px] font-bold text-gray-400 px-1">
+                                    <span className="bg-gray-50 text-gray-500 px-2.5 py-1 rounded-lg">{article.cat}</span>
+                                    <span className="font-medium">{article.date}</span>
+                                </div>
+
+                                {/* عنوان مقاله */}
+                                <h3 className="text-sm font-black text-gray-900 line-clamp-2 leading-6 px-1 hover:text-[#D92F4E] transition-colors">
+                                    <Link href='/blogs'>
+                                        {article.title}
+                                    </Link>
+                                </h3>
+
+                                {/* لید / خلاصه متن مقاله */}
+                                <p className="text-xs text-gray-500 font-medium leading-6 line-clamp-2 px-1">
+                                    {article.desc}
+                                </p>
+                            </div>
+
+                            {/* دکمه ادامه مطلب پایین کارت */}
+                            <div className="mt-5 pt-3 border-t border-gray-50/70 flex justify-end">
+                                <Link 
+                                    href='/blogs' 
+                                    className="text-xs font-bold text-[#D92F4E] group-hover:underline flex items-center gap-1 cursor-pointer"
+                                >
+                                    مطالعه مقاله
+                                    <svg className="w-3.5 h-3.5"><use href="#chevron-left"></use></svg>
+                                </Link>
+                            </div>
+
+                        </article>
+                    ))}
+                </div>
+
+                </div>
             </section>
 
             <section className="contact_section">
