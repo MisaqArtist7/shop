@@ -19,10 +19,17 @@ export default function HomePage() {
             
             <section className='category_section container mx-auto px-5 py-10 text-gray-800'>
                 {/* هدر بخش دسته‌بندی با استایل مدرن‌تر و دکمه آرشیو */}
-                <div className="flex items-center justify-between mb-8 border-b border-gray-100 pb-4">
-                    <h2 className="font-bold text-lg md:text-xl text-gray-950 relative after:content-[''] after:absolute after:-bottom-[18px] after:right-0 after:w-16 after:h-0.5 after:bg-[#D92F4E]">
-                        دسته‌بندی‌های اصلی
-                    </h2>
+                <div className="flex items-center justify-between border-b border-gray-100 pb-4">
+                    <div className='flex items-center justify-center gap-2'>
+                        <span className="flex justify-center items-center h-4 w-4 relative">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-rose-500"></span>
+                        </span>
+                        <h2 className="font-bold text-lg md:text-xl text-gray-950">
+                            دسته‌بندی‌ها
+                        </h2>
+                    </div>
+                    <div></div>
                 </div>
                 
                 {/* گرید کاملاً ریسپانسیو */}
@@ -156,25 +163,29 @@ export default function HomePage() {
                 <div className="container rounded-3xl p-6 md:p-8 border border-gray-100 shadow-sm shadow-gray-100/50">
                 
                 {/* هدر بخش مقالات شامل عنوان و دکمه مشاهده همه */}
-                <div className="flex justify-between items-center border-b border-gray-50 pb-5 mb-6 font-semibold">
-                    <div className="space-y-1">
-                        <h2 className="text-lg md:text-xl font-black text-gray-900 flex items-center gap-2">
-                            <span className="w-2.5 h-2.5 rounded-md bg-[#D92F4E]"></span>
-                            آخرین مقالات و مجله تخصصی
+                <div className="flex items-center justify-between border-b border-gray-100 pb-4">
+                    <div className='flex items-center justify-center gap-2'>
+                        <span className="flex justify-center items-center h-4 w-4 relative">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                            <span className="relative inline-flex rounded-full h-3 w-3 bg-rose-500"></span>
+                        </span>
+                        <h2 className="font-bold text-lg md:text-xl text-gray-950">
+                            جدید ترین مقالات
                         </h2>
-                        <p className="text-xs text-gray-400 font-medium">به‌روزترین آموزش‌ها و راهنمای فنی تجهیزات سی‌ان‌سی</p>
                     </div>
-                    
-                    <Link 
-                        href="/blogs" 
-                        className="flex items-center px-4 py-2 rounded-xl text-white bg-[#D92F4E] transition-all font-bold text-sm"
-                    >
-                        مشاهده همه مقالات
+                    <div>
+                    <Link href='/offer' className="flex items-center font-medium 
+                    text-[#ED1945] border-2 border-[#ED1945]/30 
+                    px-2 py-2 md:px-4 md:py-2 rounded-xl
+                    hover:bg-[#ED1945] hover:text-white
+                    transition-all duration-150 group">
+                        مشاهده همه
                         <svg className="w-4 h-4">
                             <use href="#chevron-left"></use>
                         </svg>
                     </Link>
                 </div>
+            </div>
 
                 {/* گرید کارت‌های وبلاگ */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 font-semibold">
