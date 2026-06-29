@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-export default function PaymentPage() {
+export default function CheckoutPage() {
     // مدیریت روش پرداخت (پیش‌فرض: online)
     const [paymentMethod, setPaymentMethod] = useState('online');
 

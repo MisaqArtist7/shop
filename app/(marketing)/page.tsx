@@ -166,7 +166,7 @@ export default function HomePage() {
                     </div>
                     
                     <Link 
-                        href="/blog" 
+                        href="/blogs" 
                         className="flex items-center px-4 py-2 rounded-xl text-white bg-[#D92F4E] transition-all font-bold text-sm"
                     >
                         مشاهده همه مقالات
