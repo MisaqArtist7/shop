@@ -15,7 +15,7 @@ export default function CreateCategoryPage() {
                         <input 
                             type="search" 
                             placeholder="جستجو..." 
-                            className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-10 pl-4 py-2.5 outline-none text-sm transition-all focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10"
+                            className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-10 pl-4 py-2.5 outline-none  transition-all focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10"
                         />
                         <svg className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
                             <use href="#searchIcon"></use>
@@ -43,7 +43,7 @@ export default function CreateCategoryPage() {
                         </div>
                         <div>
                             <h2 className="font-black text-gray-900 text-base">میثاق باباخانی</h2>
-                            <span className="text-xs font-bold text-gray-400 block mt-1">مدیر کل مجموعه</span>
+                            <span className=" font-bold text-gray-400 block mt-1">مدیر کل مجموعه</span>
                         </div>
                     </div>
 
@@ -59,7 +59,7 @@ export default function CreateCategoryPage() {
                                 <li key={index}>
                                     <Link 
                                         href={item.href} 
-                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 group ${
+                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl  font-bold transition-all duration-200 group ${
                                             item.active 
                                             ? 'bg-[#D92F4E] text-white shadow-lg shadow-[#D92F4E]/20' 
                                             : 'text-gray-600 hover:bg-gray-50 hover:text-black'
@@ -80,7 +80,7 @@ export default function CreateCategoryPage() {
                 <div className="flex-1 bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-8 border border-gray-100">
                     <div className="mb-8 pb-4 border-b border-gray-50 flex justify-between items-center">
                         <h1 className="text-xl font-black text-gray-900">فروشگاه - افزودن دسته‌بندی جدید</h1>
-                        <span className="text-xs font-medium text-gray-400 bg-gray-50 px-3 py-1.5 rounded-md">تنظیمات ساختار سایت</span>
+                        <span className=" font-medium text-gray-400 bg-gray-50 px-3 py-1.5 rounded-md">تنظیمات ساختار سایت</span>
                     </div>
                     
                     <div className="max-w-4xl mx-auto">
@@ -89,19 +89,19 @@ export default function CreateCategoryPage() {
                             {/* ردیف ۱: نام دسته‌بندی و نامک سئو (دو ستونه) */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="block text-sm font-bold mb-2 text-gray-700">نام دسته‌بندی</label>
+                                    <label className="block  font-bold mb-2 text-gray-700">نام دسته‌بندی</label>
                                     <input
                                         type="text"
                                         placeholder="مثلاً: قطعات یدکی CNC"
-                                        className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5 text-sm outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all"
+                                        className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5  outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-bold mb-2 text-gray-700">نامک در URL (Slug - انگلیسی)</label>
+                                    <label className="block  font-bold mb-2 text-gray-700">نامک در URL (Slug - انگلیسی)</label>
                                     <input
                                         type="text"
                                         placeholder="for example: cnc-spare-parts"
-                                        className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5 text-sm outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all text-left"
+                                        className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5  outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all text-left"
                                         dir="ltr"
                                     />
                                 </div>
@@ -109,8 +109,8 @@ export default function CreateCategoryPage() {
 
                             {/* ردیف ۲: انتخاب دسته‌بندی مادر (والد) */}
                             <div>
-                                <label className="block text-sm font-bold mb-2 text-gray-700">دسته‌بندی مادر (والد)</label>
-                                <select className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5 text-sm outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all appearance-none cursor-pointer">
+                                <label className="block  font-bold mb-2 text-gray-700">دسته‌بندی مادر (والد)</label>
+                                <select className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5  outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all appearance-none cursor-pointer">
                                     <option value="">خودش دسته‌بندی اصلی باشد (بدون والد)</option>
                                     <option value="1">دستگاه‌های CNC</option>
                                     <option value="2">ابزارآلات و مته‌ها</option>
@@ -121,23 +121,23 @@ export default function CreateCategoryPage() {
 
                             {/* ردیف ۳: آیکون یا بنر دسته‌بندی */}
                             <div>
-                                <label className="block text-sm font-bold mb-2 text-gray-700">تصویر یا آیکون شاخص دسته‌بندی</label>
+                                <label className="block  font-bold mb-2 text-gray-700">تصویر یا آیکون شاخص دسته‌بندی</label>
                                 <div className="border-2 border-dashed border-gray-200 rounded-2xl p-6 flex flex-col items-center justify-center bg-gray-50/50 hover:bg-gray-50 hover:border-[#D92F4E]/40 transition-all cursor-pointer group">
                                     <svg className="w-10 h-10 text-gray-400 group-hover:text-[#D92F4E] transition-colors mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                     </svg>
-                                    <span className="text-xs font-bold text-gray-500 group-hover:text-[#D92F4E] transition-colors">آیکون منو یا تصویر این دسته‌بندی را آپلود کنید</span>
+                                    <span className=" font-bold text-gray-500 group-hover:text-[#D92F4E] transition-colors">آیکون منو یا تصویر این دسته‌بندی را آپلود کنید</span>
                                     <span className="text-[10px] text-gray-400 mt-1">ابعاد پیشنهادی استاندارد: 512x512 پیکسل</span>
                                 </div>
                             </div>
 
                             {/* ردیف ۴: توضیحات متا (برای سئوی دسته‌بندی در گوگل) */}
                             <div>
-                                <label className="block text-sm font-bold mb-2 text-gray-700">توضیحات دسته‌بندی (Meta Description)</label>
+                                <label className="block  font-bold mb-2 text-gray-700">توضیحات دسته‌بندی (Meta Description)</label>
                                 <textarea
                                     rows={3}
                                     placeholder="توضیحات کوتاهی بنویسید که در نتایج گوگل هنگام سرچ این دسته‌بندی نمایش داده شود..."
-                                    className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5 text-sm outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all resize-none"
+                                    className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5  outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all resize-none"
                                 />
                             </div>
 
@@ -145,7 +145,7 @@ export default function CreateCategoryPage() {
                             <div className="flex justify-end pt-4 border-t border-gray-50">
                                 <button
                                     type="submit"
-                                    className="bg-[#D92F4E] text-white px-8 py-3.5 rounded-xl text-sm font-bold hover:bg-[#b92742] transition-all duration-300 shadow-lg shadow-[#D92F4E]/20 cursor-pointer"
+                                    className="bg-[#D92F4E] text-white px-8 py-3.5 rounded-xl  font-bold hover:bg-[#b92742] transition-all duration-300 shadow-lg shadow-[#D92F4E]/20 cursor-pointer"
                                 >
                                     ایجاد دسته‌بندی
                                 </button>

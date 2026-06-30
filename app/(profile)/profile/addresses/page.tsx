@@ -18,7 +18,6 @@ export default function AddressesPage() {
     return (
         <>
             <section className="min-h-screen bg-gray-50 flex gap-8 p-6 md:p-8 font-semibold">         
-                
                 {/* سایدبار مشتری */}
                 <aside className="w-80 bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 flex flex-col shrink-0 border border-gray-100">
                     <div className="flex flex-col items-center text-center gap-3 pb-6 border-b border-gray-100">
@@ -27,7 +26,7 @@ export default function AddressesPage() {
                         </div>
                         <div>
                             <h2 className="font-black text-gray-900 text-base">میثاق باباخانی</h2>
-                            <span className="text-xs font-bold text-gray-400 block mt-1">به پنل کاربری خوش آمدید!</span>
+                            <span className=" font-bold text-gray-400 block mt-1">به پنل کاربری خوش آمدید!</span>
                         </div>
                     </div>
 
@@ -44,7 +43,7 @@ export default function AddressesPage() {
                                 <li key={index}>
                                     <Link 
                                         href={item.href} 
-                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 group ${
+                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl  font-bold transition-all duration-200 group ${
                                             item.active 
                                             ? 'bg-[#D92F4E] text-white shadow-lg shadow-[#D92F4E]/20' 
                                             : 'text-gray-600 hover:bg-gray-50 hover:text-black'
@@ -68,9 +67,9 @@ export default function AddressesPage() {
                     <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 border border-gray-100 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                         <div>
                             <h1 className="text-xl font-black text-gray-900">آدرس‌های تحویل سفارش</h1>
-                            <p className="text-xs text-gray-400 mt-1 font-medium">محل‌های ارسال بار و تخلیه تجهیزات خود را مشخص کنید</p>
+                            <p className=" text-gray-400 mt-1 font-medium">محل‌های ارسال بار و تخلیه تجهیزات خود را مشخص کنید</p>
                         </div>
-                        <button className="bg-[#D92F4E] text-white px-5 py-3 rounded-xl text-xs font-bold hover:bg-[#b8253f] transition-colors shadow-md shadow-[#D92F4E]/10 flex items-center gap-2 cursor-pointer">
+                        <button className="bg-[#D92F4E] text-white px-5 py-3 rounded-xl  font-bold hover:bg-[#b8253f] transition-colors shadow-md shadow-[#D92F4E]/10 flex items-center gap-2 cursor-pointer">
                             <svg className="w-4 h-4"><use href="#plus-circle"></use></svg>
                             افزودن آدرس جدید
                         </button>
@@ -85,7 +84,7 @@ export default function AddressesPage() {
                                 
                                 <div className="space-y-4">
                                     <div className="flex items-center justify-between border-b border-gray-50 pb-3">
-                                        <h3 className="font-black text-gray-900 text-sm flex items-center gap-2">
+                                        <h3 className="font-black text-gray-900  flex items-center gap-2">
                                             <span className="w-2 h-2 rounded-full bg-gray-400"></span>
                                             {item.title}
                                         </h3>
@@ -102,18 +101,18 @@ export default function AddressesPage() {
 
                                     <div className="space-y-1">
                                         <span className="text-[10px] text-gray-400 block font-bold">نشانی دقیق محل شما :</span>
-                                        <p className="text-xs text-gray-600 leading-6 font-medium pl-4">{item.address}</p>
+                                        <p className=" text-gray-600 leading-6 font-medium pl-4">{item.address}</p>
                                     </div>
                                 </div>
 
-                                <div className="grid grid-cols-2 gap-4 bg-gray-50/50 rounded-2xl p-4 text-xs font-bold text-gray-500">
+                                <div className="grid grid-cols-2 gap-4 bg-gray-50/50 rounded-2xl p-4  font-bold text-gray-500">
                                     <div className="space-y-1">
                                         <span className="block text-[10px] text-gray-400">کد پستی مقصد</span>
                                         <span className="text-gray-800 font-mono" dir="ltr">{item.postalCode}</span>
                                     </div>
                                     <div className="space-y-1">
                                         <span className="block text-[10px] text-gray-400">تحویل‌گیرنده بار</span>
-                                        <span className="text-gray-800 text-xs">{item.receiver}</span>
+                                        <span className="text-gray-800 ">{item.receiver}</span>
                                     </div>
                                     <div className="space-y-1 col-span-2 border-t border-gray-100/70 pt-2 mt-1">
                                         <span className="text-[10px] text-gray-400 ml-1">شماره هماهنگی تحویل:</span>

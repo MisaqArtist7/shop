@@ -14,7 +14,7 @@ export default function PersonalInfoPage() {
                         </div>
                         <div>
                             <h2 className="font-black text-gray-900 text-base">میثاق باباخانی</h2>
-                            <span className="text-xs font-bold text-gray-400 block mt-1">به پنل کاربری خوش آمدید!</span>
+                            <span className=" font-bold text-gray-400 block mt-1">به پنل کاربری خوش آمدید!</span>
                         </div>
                     </div>
 
@@ -31,7 +31,7 @@ export default function PersonalInfoPage() {
                                 <li key={index}>
                                     <Link 
                                         href={item.href} 
-                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 group ${
+                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl  font-bold transition-all duration-200 group ${
                                             item.active 
                                             ? 'bg-[#D92F4E] text-white shadow-lg shadow-[#D92F4E]/20' 
                                             : 'text-gray-600 hover:bg-gray-50 hover:text-black'
@@ -55,57 +55,57 @@ export default function PersonalInfoPage() {
                     <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 md:p-8 border border-gray-100">
                         <div className="mb-6 pb-4 border-b border-gray-50">
                             <h1 className="text-xl font-black text-gray-900">اطلاعات حساب کاربری</h1>
-                            <p className="text-xs text-gray-400 mt-1 font-medium">مشخصات فردی و اطلاعات تماس خود را ویرایش کنید</p>
+                            <p className=" text-gray-400 mt-1 font-medium">مشخصات فردی و اطلاعات تماس خود را ویرایش کنید</p>
                         </div>
 
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 {/* نام و نام خانوادگی */}
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold text-gray-500 block">نام و نام خانوادگی</label>
+                                    <label className=" font-bold text-gray-500 block">نام و نام خانوادگی</label>
                                     <input 
                                         type="text" 
                                         defaultValue="میثاق باباخانی" 
-                                        className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 outline-none text-sm transition-all focus:bg-white focus:border-[#D92F4E]"
+                                        className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 outline-none  transition-all focus:bg-white focus:border-[#D92F4E]"
                                     />
                                 </div>
 
                                 {/* شماره تلفن همراه (معمولاً قفل است) */}
                                 <div className="space-y-2 relative">
-                                    <label className="text-xs font-bold text-gray-400 block">شماره تلفن همراه (غیرقابل تغییر)</label>
+                                    <label className=" font-bold text-gray-400 block">شماره تلفن همراه (غیرقابل تغییر)</label>
                                     <input 
                                         type="text" 
                                         disabled
                                         defaultValue="۰۹۱۲۳۴۵۶۷۸۹" 
-                                        className="w-full font-mono bg-gray-100/70 border border-gray-200 rounded-xl px-4 py-3 outline-none text-sm text-gray-400 cursor-not-allowed" 
+                                        className="w-full font-mono bg-gray-100/70 border border-gray-200 rounded-xl px-4 py-3 outline-none  text-gray-400 cursor-not-allowed" 
                                         dir="ltr"
                                     />
                                 </div>
 
                                 {/* آدرس ایمیل */}
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold text-gray-500 block">آدرس ایمیل</label>
+                                    <label className=" font-bold text-gray-500 block">آدرس ایمیل</label>
                                     <input 
                                         type="email" 
                                         defaultValue="misagh@example.com" 
-                                        className="w-full font-mono bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 outline-none text-sm transition-all focus:bg-white focus:border-[#D92F4E]" 
+                                        className="w-full font-mono bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 outline-none  transition-all focus:bg-white focus:border-[#D92F4E]" 
                                         dir="ltr"
                                     />
                                 </div>
 
                                 {/* کد ملی یا کد اقتصادی شرکت */}
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold text-gray-500 block">کد ملی / شناسه اقتصادی</label>
+                                    <label className=" font-bold text-gray-500 block">کد ملی / شناسه اقتصادی</label>
                                     <input 
                                         type="text" 
                                         placeholder="جهت صدور فاکتور رسمی وارد کنید..." 
-                                        className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 outline-none text-sm transition-all focus:bg-white focus:border-[#D92F4E]"
+                                        className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 outline-none  transition-all focus:bg-white focus:border-[#D92F4E]"
                                     />
                                 </div>
                             </div>
 
                             <div className="flex justify-end pt-2">
-                                <button type="button" className="bg-[#D92F4E] text-white px-6 py-3 rounded-xl text-xs font-bold hover:bg-[#b8253f] transition-colors shadow-md shadow-[#D92F4E]/10 cursor-pointer">
+                                <button type="button" className="bg-[#D92F4E] text-white px-6 py-3 rounded-xl  font-bold hover:bg-[#b8253f] transition-colors shadow-md shadow-[#D92F4E]/10 cursor-pointer">
                                     ثبت و بروزرسانی مشخصات
                                 </button>
                             </div>
@@ -116,34 +116,34 @@ export default function PersonalInfoPage() {
                     <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 md:p-8 border border-gray-100">
                         <div className="mb-6 pb-4 border-b border-gray-50">
                             <h2 className="text-base font-black text-gray-900">تغییر رمز عبور حساب</h2>
-                            <p className="text-xs text-gray-400 mt-1 font-medium">برای حفظ امنیت حساب خود، رمز عبور پیچیده انتخاب کنید</p>
+                            <p className=" text-gray-400 mt-1 font-medium">برای حفظ امنیت حساب خود، رمز عبور پیچیده انتخاب کنید</p>
                         </div>
 
                         <form className="space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                 {/* رمز عبور فعلی */}
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold text-gray-500 block">رمز عبور فعلی</label>
+                                    <label className=" font-bold text-gray-500 block">رمز عبور فعلی</label>
                                     <input 
                                         type="password" 
                                         placeholder="••••••••" 
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 outline-none text-sm transition-all focus:bg-white focus:border-[#D92F4E]"
+                                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 outline-none  transition-all focus:bg-white focus:border-[#D92F4E]"
                                     />
                                 </div>
 
                                 {/* رمز عبور جدید */}
                                 <div className="space-y-2">
-                                    <label className="text-xs font-bold text-gray-500 block">رمز عبور جدید</label>
+                                    <label className=" font-bold text-gray-500 block">رمز عبور جدید</label>
                                     <input 
                                         type="password" 
                                         placeholder="حداقل ۸ کاراکتر..." 
-                                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 outline-none text-sm transition-all focus:bg-white focus:border-[#D92F4E]"
+                                        className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 outline-none  transition-all focus:bg-white focus:border-[#D92F4E]"
                                     />
                                 </div>
                             </div>
 
                             <div className="flex justify-end pt-2">
-                                <button type="button" className="border border-gray-200 hover:border-[#D92F4E] hover:text-[#D92F4E] text-gray-600 px-6 py-3 rounded-xl text-xs font-bold transition-all cursor-pointer">
+                                <button type="button" className="border border-gray-200 hover:border-[#D92F4E] hover:text-[#D92F4E] text-gray-600 px-6 py-3 rounded-xl  font-bold transition-all cursor-pointer">
                                     تغییر رمز عبور
                                 </button>
                             </div>

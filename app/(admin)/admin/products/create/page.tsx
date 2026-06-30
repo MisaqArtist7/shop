@@ -15,7 +15,7 @@ export default function CreateProductPage() {
                         <input 
                             type="search" 
                             placeholder="جستجو..." 
-                            className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-10 pl-4 py-2.5 outline-none text-sm transition-all focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10"
+                            className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-10 pl-4 py-2.5 outline-none  transition-all focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10"
                         />
                         <svg className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
                             <use href="#searchIcon"></use>
@@ -43,7 +43,7 @@ export default function CreateProductPage() {
                         </div>
                         <div>
                             <h2 className="font-black text-gray-900 text-base">میثاق باباخانی</h2>
-                            <span className="text-xs font-bold text-gray-400 block mt-1">مدیر کل مجموعه</span>
+                            <span className=" font-bold text-gray-400 block mt-1">مدیر کل مجموعه</span>
                         </div>
                     </div>
 
@@ -59,7 +59,7 @@ export default function CreateProductPage() {
                                 <li key={index}>
                                     <Link 
                                         href={item.href} 
-                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 group ${
+                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl  font-bold transition-all duration-200 group ${
                                             item.active 
                                             ? 'bg-[#D92F4E] text-white shadow-lg shadow-[#D92F4E]/20' 
                                             : 'text-gray-600 hover:bg-gray-50 hover:text-black'
@@ -76,7 +76,7 @@ export default function CreateProductPage() {
                     </nav>
                     
                     <div className="pt-4 border-t border-gray-100">
-                        <button className="w-full flex items-center justify-center gap-2 py-3 text-sm font-bold text-gray-400 hover:text-[#D92F4E] hover:bg-red-50 rounded-xl transition-colors cursor-pointer">
+                        <button className="w-full flex items-center justify-center gap-2 py-3  font-bold text-gray-400 hover:text-[#D92F4E] hover:bg-red-50 rounded-xl transition-colors cursor-pointer">
                             <svg className="w-5 h-5"><use href="#logout-icon"></use></svg>
                             <span>خروج از حساب</span>
                         </button>
@@ -87,7 +87,7 @@ export default function CreateProductPage() {
                 <div className="flex-1 bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-8 border border-gray-100">
                     <div className="mb-8 pb-4 border-b border-gray-50 flex justify-between items-center">
                         <h1 className="text-xl font-black text-gray-900">فروشگاه - افزودن محصول جدید</h1>
-                        <span className="text-xs font-medium text-gray-400 bg-gray-50 px-3 py-1.5 rounded-md">مرحله ۱ از ۲</span>
+                        <span className=" font-medium text-gray-400 bg-gray-50 px-3 py-1.5 rounded-md">مرحله ۱ از ۲</span>
                     </div>
                     
                     <div className="max-w-4xl mx-auto">
@@ -95,30 +95,30 @@ export default function CreateProductPage() {
                             
                             {/* ردیف ۱: نام محصول (تک ستون) */}
                             <div>
-                                <label className="block text-sm font-bold mb-2 text-gray-700">نام محصول</label>
+                                <label className="block  font-bold mb-2 text-gray-700">نام محصول</label>
                                 <input
                                     type="text"
                                     placeholder="مثلاً: دستگاه CNC مدل تک محور X1"
-                                    className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5 text-sm outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all"
+                                    className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5  outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all"
                                 />
                             </div>
 
                             {/* ردیف ۲: قیمت و تخفیف (دو ستونه) */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="block text-sm font-bold mb-2 text-gray-700">قیمت (تومان)</label>
+                                    <label className="block  font-bold mb-2 text-gray-700">قیمت (تومان)</label>
                                     <input
                                         type="number"
                                         placeholder="مثلاً: 45000000"
-                                        className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5 text-sm outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all"
+                                        className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5  outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all"
                                     />
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-bold mb-2 text-gray-700">تخفیف (درصد یا مبلغ)</label>
+                                    <label className="block  font-bold mb-2 text-gray-700">تخفیف (درصد یا مبلغ)</label>
                                     <input
                                         type="number"
                                         placeholder="مثلاً: 5"
-                                        className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5 text-sm outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all"
+                                        className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5  outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all"
                                     />
                                 </div>
                             </div>
@@ -126,8 +126,8 @@ export default function CreateProductPage() {
                             {/* ردیف ۳: دسته‌بندی و موجودی (دو ستونه) */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="block text-sm font-bold mb-2 text-gray-700">دسته‌بندی</label>
-                                    <select className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5 text-sm outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all appearance-none cursor-pointer">
+                                    <label className="block  font-bold mb-2 text-gray-700">دسته‌بندی</label>
+                                    <select className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5  outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all appearance-none cursor-pointer">
                                         <option value="">انتخاب کنید</option>
                                         <option value="cnc">دستگاه CNC</option>
                                         <option value="parts">قطعات یدکی</option>
@@ -135,34 +135,34 @@ export default function CreateProductPage() {
                                     </select>
                                 </div>
                                 <div>
-                                    <label className="block text-sm font-bold mb-2 text-gray-700">موجودی انبار</label>
+                                    <label className="block  font-bold mb-2 text-gray-700">موجودی انبار</label>
                                     <input
                                         type="number"
                                         placeholder="مثلاً: 12"
-                                        className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5 text-sm outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all"
+                                        className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5  outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all"
                                     />
                                 </div>
                             </div>
 
                             {/* ردیف ۴: تصویر محصول (استایل مدرن آپلودر) */}
                             <div>
-                                <label className="block text-sm font-bold mb-2 text-gray-700">تصویر محصول</label>
+                                <label className="block  font-bold mb-2 text-gray-700">تصویر محصول</label>
                                 <div className="border-2 border-dashed border-gray-200 rounded-2xl p-6 flex flex-col items-center justify-center bg-gray-50/50 hover:bg-gray-50 hover:border-[#D92F4E]/40 transition-all cursor-pointer group">
                                     <svg className="w-10 h-10 text-gray-400 group-hover:text-[#D92F4E] transition-colors mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 002-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                     </svg>
-                                    <span className="text-xs font-bold text-gray-500 group-hover:text-[#D92F4E] transition-colors">کلیک کنید یا تصویر را به این بخش بکشید</span>
+                                    <span className=" font-bold text-gray-500 group-hover:text-[#D92F4E] transition-colors">کلیک کنید یا تصویر را به این بخش بکشید</span>
                                     <span className="text-[10px] text-gray-400 mt-1">فرمت‌های مجاز: PNG, JPG, WEBP</span>
                                 </div>
                             </div>
 
                             {/* ردیف ۵: توضیحات (تک ستون) */}
                             <div>
-                                <label className="block text-sm font-bold mb-2 text-gray-700">توضیحات فنی و اجمالی</label>
+                                <label className="block  font-bold mb-2 text-gray-700">توضیحات فنی و اجمالی</label>
                                 <textarea
                                     rows={5}
                                     placeholder="مشخصات موتور، ابعاد، توان مصرفی و..."
-                                    className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5 text-sm outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all resize-none"
+                                    className="w-full border border-gray-200 bg-gray-50/30 rounded-xl p-3.5  outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all resize-none"
                                 />
                             </div>
 
@@ -170,7 +170,7 @@ export default function CreateProductPage() {
                             <div className="flex justify-end pt-4 border-t border-gray-50">
                                 <button
                                     type="submit"
-                                    className="bg-[#D92F4E] text-white px-8 py-3.5 rounded-xl text-sm font-bold hover:bg-[#b92742] transition-all duration-300 shadow-lg shadow-[#D92F4E]/20 cursor-pointer"
+                                    className="bg-[#D92F4E] text-white px-8 py-3.5 rounded-xl  font-bold hover:bg-[#b92742] transition-all duration-300 shadow-lg shadow-[#D92F4E]/20 cursor-pointer"
                                 >
                                     ذخیره و ثبت محصول
                                 </button>

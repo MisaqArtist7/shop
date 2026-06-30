@@ -28,7 +28,7 @@ export default function ProfileDashboard() {
                         </div>
                         <div>
                             <h2 className="font-black text-gray-900 text-base">میثاق باباخانی</h2>
-                            <span className="text-xs font-bold text-gray-400 block mt-1">به پنل کاربری خوش آمدید!</span>
+                            <span className=" font-bold text-gray-400 block mt-1">به پنل کاربری خوش آمدید!</span>
                         </div>
                     </div>
 
@@ -45,7 +45,7 @@ export default function ProfileDashboard() {
                                 <li key={index}>
                                     <Link 
                                         href={item.href} 
-                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 group ${
+                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl  font-bold transition-all duration-200 group ${
                                             item.active 
                                             ? 'bg-[#D92F4E] text-white shadow-lg shadow-[#D92F4E]/20' 
                                             : 'text-gray-600 hover:bg-gray-50 hover:text-black'
@@ -68,29 +68,29 @@ export default function ProfileDashboard() {
                     {/* ردیف اول: آمار کلی و خوش‌آمد گویی سریع */}
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                         <div className="bg-white border border-gray-100 rounded-3xl p-5 flex flex-col justify-center shadow-sm shadow-gray-200/40">
-                            <span className="text-xs text-gray-400 block mb-1">خوش‌آمدید حجی!</span>
+                            <span className=" text-gray-400 block mb-1">خوش‌آمدید حجی!</span>
                             <h1 className="text-base font-black text-gray-900">{customerSummary.name}</h1>
                         </div>
                         <div className="bg-white border border-gray-100 rounded-3xl p-5 flex items-center justify-between shadow-sm shadow-gray-200/40">
-                            <span className="text-xs text-gray-500 font-bold">سفارش‌های در جریان:</span>
-                            <span className="text-xs font-black px-2.5 py-1 rounded-lg bg-amber-50 text-amber-600">۱ سفارش</span>
+                            <span className=" text-gray-500 font-bold">سفارش‌های در جریان:</span>
+                            <span className=" font-black px-2.5 py-1 rounded-lg bg-amber-50 text-amber-600">۱ سفارش</span>
                         </div>
                         <div className="bg-white border border-gray-100 rounded-3xl p-5 flex items-center justify-between shadow-sm shadow-gray-200/40">
-                            <span className="text-xs text-gray-500 font-bold">کل خریدهای موفق:</span>
-                            <span className="text-xs font-black px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-600">۱ سفارش</span>
+                            <span className=" text-gray-500 font-bold">کل خریدهای موفق:</span>
+                            <span className=" font-black px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-600">۱ سفارش</span>
                         </div>
                     </div>
 
                     {/* ردیف دوم: جدول آخرین سفارش‌ها به صورت تمام‌عرض */}
                     <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl border border-gray-100 overflow-hidden w-full">
                         <div className="px-6 py-5 border-b border-gray-50 flex justify-between items-center bg-gray-50/50">
-                            <h2 className="font-black text-gray-900 text-sm">آخرین سفارش‌های من</h2>
-                            <Link href="/profile/orders" className="text-xs text-[#D92F4E] hover:underline">مشاهده همه سفارش‌ها</Link>
+                            <h2 className="font-black text-gray-900 ">آخرین سفارش‌های من</h2>
+                            <Link href="/profile/orders" className=" text-[#D92F4E] hover:underline">مشاهده همه سفارش‌ها</Link>
                         </div>
                         <div className="overflow-x-auto">
-                            <table className="w-full text-right border-collapse text-sm">
+                            <table className="w-full text-right border-collapse ">
                                 <thead>
-                                    <tr className="bg-gray-50/30 text-gray-400 font-bold border-b border-gray-100 text-xs">
+                                    <tr className="bg-gray-50/30 text-gray-400 font-bold border-b border-gray-100 ">
                                         <th className="p-4">کد سفارش</th>
                                         <th className="p-4">تاریخ ثبت</th>
                                         <th className="p-4">مبلغ کل (تومان)</th>
@@ -101,10 +101,10 @@ export default function ProfileDashboard() {
                                     {latestOrdersSample.map((order) => (
                                         <tr key={order.id} className="hover:bg-gray-50/50 transition-colors">
                                             <td className="p-4 font-bold text-gray-900 font-mono">{order.id}</td>
-                                            <td className="p-4 text-xs">{order.date}</td>
+                                            <td className="p-4 ">{order.date}</td>
                                             <td className="p-4 text-gray-900 font-black">{order.total}</td>
                                             <td className="p-4 text-center">
-                                                <span className={`px-3 py-1 rounded-full text-xs font-bold ${order.statusStyle}`}>
+                                                <span className={`px-3 py-1 rounded-full  font-bold ${order.statusStyle}`}>
                                                     {order.status}
                                                 </span>
                                             </td>
@@ -121,13 +121,13 @@ export default function ProfileDashboard() {
                         {/* باکس اطلاعات حساب کاربری */}
                         <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 border border-gray-100 space-y-4 flex flex-col justify-between">
                             <div className="flex items-center justify-between border-b border-gray-50 pb-3">
-                                <h3 className="font-black text-gray-900 text-xs flex items-center gap-1.5">
+                                <h3 className="font-black text-gray-900  flex items-center gap-1.5">
                                     <span className="w-1.5 h-1.5 rounded-full bg-[#D92F4E]"></span>
                                     اطلاعات حساب مشتری
                                 </h3>
-                                <Link href="/profile/personal-info" className="text-xs text-gray-400 hover:text-black">ویرایش مشخصات</Link>
+                                <Link href="/profile/personal-info" className=" text-gray-400 hover:text-black">ویرایش مشخصات</Link>
                             </div>
-                            <div className="text-xs space-y-3 py-1">
+                            <div className=" space-y-3 py-1">
                                 <p className="text-gray-600"><span className="text-gray-400 ml-2 font-bold">تلفن همراه:</span><span className="font-mono text-gray-900 font-bold">{customerSummary.phone}</span></p>
                                 <p className="text-gray-600"><span className="text-gray-400 ml-2 font-bold">آدرس ایمیل:</span><span className="font-mono text-gray-900 font-bold">{customerSummary.email}</span></p>
                             </div>
@@ -136,14 +136,14 @@ export default function ProfileDashboard() {
                         {/* باکس نشانی پیش‌فرض ارسال بار */}
                         <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 border border-gray-100 space-y-4 flex flex-col justify-between">
                             <div className="flex items-center justify-between border-b border-gray-50 pb-3">
-                                <h3 className="font-black text-gray-900 text-xs flex items-center gap-1.5">
+                                <h3 className="font-black text-gray-900  flex items-center gap-1.5">
                                     <span className="w-1.5 h-1.5 rounded-full bg-[#D92F4E]"></span>
                                     نشانی اصلی تحویل بار
                                 </h3>
-                                <Link href="/profile/addresses" className="text-xs text-gray-400 hover:text-black">مدیریت آدرس‌ها</Link>
+                                <Link href="/profile/addresses" className=" text-gray-400 hover:text-black">مدیریت آدرس‌ها</Link>
                             </div>
                             <div className="py-1">
-                                <p className="text-xs text-gray-600 leading-6 font-medium line-clamp-2">
+                                <p className=" text-gray-600 leading-6 font-medium line-clamp-2">
                                     {customerSummary.mainAddress}
                                 </p>
                             </div>

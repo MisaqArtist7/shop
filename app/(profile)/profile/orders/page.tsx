@@ -21,7 +21,7 @@ export default function OrdersPage() {
                         </div>
                         <div>
                             <h2 className="font-black text-gray-900 text-base">میثاق باباخانی</h2>
-                            <span className="text-xs font-bold text-gray-400 block mt-1">به پنل کاربری خوش آمدید!</span>
+                            <span className=" font-bold text-gray-400 block mt-1">به پنل کاربری خوش آمدید!</span>
                         </div>
                     </div>
 
@@ -38,7 +38,7 @@ export default function OrdersPage() {
                                 <li key={index}>
                                     <Link 
                                         href={item.href} 
-                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 group ${
+                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl  font-bold transition-all duration-200 group ${
                                             item.active 
                                             ? 'bg-[#D92F4E] text-white shadow-lg shadow-[#D92F4E]/20' 
                                             : 'text-gray-600 hover:bg-gray-50 hover:text-black'
@@ -68,7 +68,7 @@ export default function OrdersPage() {
                                 <input 
                                     type="text" 
                                     placeholder="جستجوی کد سفارش..." 
-                                    className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-9 pl-4 py-2.5 outline-none text-xs transition-all focus:border-[#D92F4E] focus:bg-white"
+                                    className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-9 pl-4 py-2.5 outline-none  transition-all focus:border-[#D92F4E] focus:bg-white"
                                 />
                                 <svg className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
                                     <use href="#searchIcon"></use>
@@ -77,7 +77,7 @@ export default function OrdersPage() {
                         </div>
 
                         {/* تب‌های تفکیک وضعیت بر اساس استایل دکمه‌های مینی‌مال */}
-                        <div className="flex flex-wrap gap-2 text-xs">
+                        <div className="flex flex-wrap gap-2 ">
                             <button className="bg-[#D92F4E] text-white px-4 py-2.5 rounded-xl font-bold shadow-md shadow-[#D92F4E]/10 cursor-pointer">همه خریدها</button>
                             <button className="bg-gray-50 hover:bg-gray-100 text-gray-600 px-4 py-2.5 rounded-xl font-bold transition-colors cursor-pointer">جاری (در حال پردازش)</button>
                             <button className="bg-gray-50 hover:bg-gray-100 text-gray-600 px-4 py-2.5 rounded-xl font-bold transition-colors cursor-pointer">تحویل داده شده</button>
@@ -88,7 +88,7 @@ export default function OrdersPage() {
                     {/* دیو دوم: جدول اصلی لیست سفارشات */}
                     <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl border border-gray-100 overflow-hidden">
                         <div className="overflow-x-auto">
-                            <table className="w-full text-right border-collapse text-sm">
+                            <table className="w-full text-right border-collapse ">
                                 <thead>
                                     <tr className="bg-gray-50/50 text-gray-400 font-bold border-b border-gray-100">
                                         <th className="p-4">کد سفارش</th>
@@ -103,18 +103,18 @@ export default function OrdersPage() {
                                 <tbody className="divide-y divide-gray-50 font-medium text-gray-700">
                                     {allOrders.map((order) => (
                                         <tr key={order.id} className="hover:bg-gray-50/70 transition-colors">
-                                            <td className="p-4 font-bold text-gray-900 font-mono text-sm">{order.id}</td>
-                                            <td className="p-4 text-gray-500 text-xs">{order.date}</td>
-                                            <td className="p-4 text-gray-600 text-xs">{order.count}</td>
+                                            <td className="p-4 font-bold text-gray-900 font-mono ">{order.id}</td>
+                                            <td className="p-4 text-gray-500 ">{order.date}</td>
+                                            <td className="p-4 text-gray-600 ">{order.count}</td>
                                             <td className="p-4 text-gray-900 font-black">{order.total}</td>
-                                            <td className="p-4 text-gray-500 text-xs">{order.payment}</td>
+                                            <td className="p-4 text-gray-500 ">{order.payment}</td>
                                             <td className="p-4 text-center">
-                                                <span className={`px-3 py-1 rounded-full text-xs font-bold ${order.statusStyle}`}>
+                                                <span className={`px-3 py-1 rounded-full  font-bold ${order.statusStyle}`}>
                                                     {order.status}
                                                 </span>
                                             </td>
                                             <td className="p-4 text-center">
-                                                <button className="text-xs font-bold text-[#D92F4E] hover:bg-[#D92F4E]/5 border border-[#D92F4E]/20 px-3 py-1.5 rounded-lg transition-all cursor-pointer">
+                                                <button className=" font-bold text-[#D92F4E] hover:bg-[#D92F4E]/5 border border-[#D92F4E]/20 px-3 py-1.5 rounded-lg transition-all cursor-pointer">
                                                     جزئیات فاکتور
                                                 </button>
                                             </td>

@@ -49,8 +49,9 @@ body {
   align-items: center;
 }
 
-input {
-  outline: none;
+input, a {
+  outline: none!important;
+  touch-action: none;
 }
 
 .container {

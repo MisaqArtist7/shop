@@ -21,7 +21,7 @@ export default function WishlistPage() {
                         </div>
                         <div>
                             <h2 className="font-black text-gray-900 text-base">میثاق باباخانی</h2>
-                            <span className="text-xs font-bold text-gray-400 block mt-1">به پنل کاربری خوش آمدید!</span>
+                            <span className=" font-bold text-gray-400 block mt-1">به پنل کاربری خوش آمدید!</span>
                         </div>
                     </div>
 
@@ -38,7 +38,7 @@ export default function WishlistPage() {
                                 <li key={index}>
                                     <Link 
                                         href={item.href} 
-                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 group ${
+                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl  font-bold transition-all duration-200 group ${
                                             item.active 
                                             ? 'bg-[#D92F4E] text-white shadow-lg shadow-[#D92F4E]/20' 
                                             : 'text-gray-600 hover:bg-gray-50 hover:text-black'
@@ -62,9 +62,9 @@ export default function WishlistPage() {
                     <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 border border-gray-100 flex justify-between items-center">
                         <div>
                             <h1 className="text-xl font-black text-gray-900">لیست علاقه‌مندی‌ها</h1>
-                            <p className="text-xs text-gray-400 mt-1 font-medium">قطعات و محصولاتی که نشان کرده‌اید</p>
+                            <p className=" text-gray-400 mt-1 font-medium">قطعات و محصولاتی که نشان کرده‌اید</p>
                         </div>
-                        <span className="text-xs font-bold text-[#D92F4E] bg-[#D92F4E]/10 px-3 py-1.5 rounded-xl">
+                        <span className=" font-bold text-[#D92F4E] bg-[#D92F4E]/10 px-3 py-1.5 rounded-xl">
                             {favoritesSample.length} محصول نشان‌شده
                         </span>
                     </div>
@@ -82,7 +82,7 @@ export default function WishlistPage() {
                                 <div className="space-y-4">
                                     {/* تصویر محصول */}
                                     <div className="w-full h-40 bg-gray-50 rounded-2xl relative overflow-hidden flex items-center justify-center">
-                                        <div className="text-gray-300 text-xs font-bold">تصویر قطعه</div>
+                                        <div className="text-gray-300  font-bold">تصویر قطعه</div>
                                         {/* در پروژه واقعی سورس کامنت زیر باز می‌شود: */}
                                         {/* <Image src={product.image} fill className="object-cover" alt={product.name} /> */}
                                     </div>
@@ -90,24 +90,24 @@ export default function WishlistPage() {
                                     {/* اطلاعات متنی قطعه */}
                                     <div className="space-y-1">
                                         <span className="text-[10px] text-gray-400 bg-gray-50 px-2 py-1 rounded-md inline-block">{product.cat}</span>
-                                        <h3 className="font-bold text-gray-800 text-sm line-clamp-2 h-10 pt-1 leading-6">{product.name}</h3>
+                                        <h3 className="font-bold text-gray-800  line-clamp-2 h-10 pt-1 leading-6">{product.name}</h3>
                                     </div>
                                 </div>
 
                                 {/* قیمت و دکمه خرید در پایین کارت */}
                                 <div className="mt-6 pt-4 border-t border-gray-50 flex flex-col gap-4">
-                                    <div className="flex items-center justify-between text-xs">
+                                    <div className="flex items-center justify-between ">
                                         <span className="text-gray-400 font-bold">قیمت کالا:</span>
-                                        <span className="font-black text-gray-900 text-sm">{product.price}</span>
+                                        <span className="font-black text-gray-900 ">{product.price}</span>
                                     </div>
 
                                     {product.inStock ? (
-                                        <button className="w-full bg-[#D92F4E] text-white py-3 rounded-xl text-xs font-bold hover:bg-[#b8253f] transition-colors shadow-md shadow-[#D92F4E]/10 flex items-center justify-center gap-2 cursor-pointer">
+                                        <button className="w-full bg-[#D92F4E] text-white py-3 rounded-xl  font-bold hover:bg-[#b8253f] transition-colors shadow-md shadow-[#D92F4E]/10 flex items-center justify-center gap-2 cursor-pointer">
                                             <svg className="w-4 h-4"><use href="#shopping-cart-icon"></use></svg>
                                             افزودن به سبد خرید
                                         </button>
                                     ) : (
-                                        <div className="w-full bg-gray-100 text-gray-400 py-3 rounded-xl text-xs font-bold text-center select-none">
+                                        <div className="w-full bg-gray-100 text-gray-400 py-3 rounded-xl  font-bold text-center select-none">
                                             ناموجود در انبار البرز سی‌ان‌سی
                                         </div>
                                     )}

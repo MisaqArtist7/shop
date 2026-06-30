@@ -32,7 +32,7 @@ export default function ManageProductsPage() {
                         <input 
                             type="search" 
                             placeholder="جستجو..." 
-                            className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-10 pl-4 py-2.5 outline-none text-sm transition-all focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10"
+                            className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-10 pl-4 py-2.5 outline-none  transition-all focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10"
                         />
                         <svg className="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
                             <use href="#searchIcon"></use>
@@ -60,7 +60,7 @@ export default function ManageProductsPage() {
                         </div>
                         <div>
                             <h2 className="font-black text-gray-900 text-base">میثاق باباخانی</h2>
-                            <span className="text-xs font-bold text-gray-400 block mt-1">مدیر کل مجموعه</span>
+                            <span className=" font-bold text-gray-400 block mt-1">مدیر کل مجموعه</span>
                         </div>
                     </div>
 
@@ -76,7 +76,7 @@ export default function ManageProductsPage() {
                                 <li key={index}>
                                     <Link 
                                         href={item.href} 
-                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 group ${
+                                        className={`flex items-center gap-3 px-4 py-3.5 rounded-xl  font-bold transition-all duration-200 group ${
                                             item.active 
                                             ? 'bg-[#D92F4E] text-white shadow-lg shadow-[#D92F4E]/20' 
                                             : 'text-gray-600 hover:bg-gray-50 hover:text-black'
@@ -99,7 +99,7 @@ export default function ManageProductsPage() {
                     <div className="bg-white shadow-sm shadow-gray-200/60 rounded-3xl p-6 border border-gray-100">
                         <div className="mb-8 pb-4 border-b border-gray-50 flex justify-between items-center">
                             <h1 className="text-xl font-black text-gray-900">فروشگاه - مدیریت محصولات</h1>
-                            <span className="text-xs font-medium text-gray-400 bg-gray-50 px-3 py-1.5 rounded-md">مرحله ۱ از ۲</span>
+                            <span className=" font-medium text-gray-400 bg-gray-50 px-3 py-1.5 rounded-md">مرحله ۱ از ۲</span>
                         </div>
                         <div className="flex items-center justify-between">
                             {/* فیلد جستجو */}
@@ -107,7 +107,7 @@ export default function ManageProductsPage() {
                                 <input 
                                     type="search" 
                                     placeholder="جستجوی محصول بر اساس نام، شناسه یا برند..." 
-                                    className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-10 pl-4 py-3 outline-none text-sm transition-all focus:border-[#D92F4E] focus:bg-white focus:ring-4 focus:ring-[#D92F4E]/10"
+                                    className="w-full font-medium bg-gray-50 border border-gray-200 rounded-xl pr-10 pl-4 py-3 outline-none  transition-all focus:border-[#D92F4E] focus:bg-white focus:ring-4 focus:ring-[#D92F4E]/10"
                                 />
                                 <svg className="w-5 h-5 absolute right-3.5 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none">
                                     <use href="#searchIcon"></use>
@@ -116,7 +116,7 @@ export default function ManageProductsPage() {
 
                             {/* فیلتر دسته‌بندی */}
                             <div className="w-full sm:w-64">
-                                <select className="w-full border border-gray-200 bg-gray-50 rounded-xl p-3 text-sm font-bold text-gray-600 outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all cursor-pointer">
+                                <select className="w-full border border-gray-200 bg-gray-50 rounded-xl p-3  font-bold text-gray-600 outline-none focus:bg-white focus:border-[#D92F4E] focus:ring-4 focus:ring-[#D92F4E]/10 transition-all cursor-pointer">
                                     <option value="">فیلتر بر اساس دسته‌بندی</option>
                                     <option value="cnc">دستگاه CNC</option>
                                     <option value="parts">قطعات یدکی</option>
@@ -131,12 +131,12 @@ export default function ManageProductsPage() {
                         
                         <div className="px-6 py-5 border-b border-gray-50 flex justify-between items-center bg-gray-50/50">
                             <h2 className="font-black text-gray-900 text-base">لیست کل محصولات سایت</h2>
-                            <span className="text-xs font-bold text-[#D92F4E] bg-[#D92F4E]/10 px-3 py-1.5 rounded-xl">تعداد کل: ۲۴ محصول</span>
+                            <span className=" font-bold text-[#D92F4E] bg-[#D92F4E]/10 px-3 py-1.5 rounded-xl">تعداد کل: ۲۴ محصول</span>
                         </div>
 
                         {/* جدول اسکرول‌پذیر در دسکتاپ‌های کوچک */}
                         <div className="overflow-x-auto">
-                            <table className="w-full text-right border-collapse text-sm">
+                            <table className="w-full text-right border-collapse ">
                                 <thead>
                                     <tr className="bg-gray-50/50 text-gray-700 font-bold border-b border-gray-100">
                                         <th className="p-4 text-center">تصویر</th>
@@ -165,14 +165,14 @@ export default function ManageProductsPage() {
                                             {/* ۳. دسته‌بندی */}
                                             <td className="p-4 text-gray-500">{product.category}</td>
                                             {/* ۴. برند */}
-                                            <td className="p-4"><span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md text-xs font-bold">{product.brand}</span></td>
+                                            <td className="p-4"><span className="bg-gray-100 text-gray-600 px-2 py-1 rounded-md  font-bold">{product.brand}</span></td>
                                             {/* ۵. قیمت */}
                                             <td className="p-4 text-gray-900 font-bold">{product.price}</td>
                                             {/* ۶. موجودی */}
                                             <td className="p-4 text-center font-bold text-gray-900">{product.stock} عدد</td>
                                             {/* ۷. وضعیت */}
                                             <td className="p-4 text-center">
-                                                <span className="bg-emerald-50 text-emerald-600 px-2.5 py-1 rounded-full text-xs font-bold">
+                                                <span className="bg-emerald-50 text-emerald-600 px-2.5 py-1 rounded-full  font-bold">
                                                     {product.status}
                                                 </span>
                                             </td>
@@ -182,7 +182,7 @@ export default function ManageProductsPage() {
                                                     <input 
                                                         type="number" 
                                                         defaultValue={product.stock} 
-                                                        className="w-16 border border-gray-200 rounded-lg p-1.5 text-center text-xs font-bold focus:border-[#D92F4E] outline-none"
+                                                        className="w-16 border border-gray-200 rounded-lg p-1.5 text-center  font-bold focus:border-[#D92F4E] outline-none"
                                                     />
                                                 </div>
                                             </td>
